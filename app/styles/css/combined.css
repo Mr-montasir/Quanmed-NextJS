@@ -4137,8 +4137,10 @@
   align-items: center;
   z-index: 5;
 }
-.main_app .main_nav .left_side img {
+.main_app .main_nav .left_side img,
+.main_app .main_nav .left_side svg {
   height: 48px;
+  max-width: 50vw;
   transform: translateY(5px);
 }
 .main_app .main_nav .left_side nav {
@@ -4259,7 +4261,8 @@
   opacity: 1;
 }
 @media (max-width: 568px) {
-  .main_app header .left_side img {
+  .main_app header .left_side img,
+  .main_app header .left_side svg {
     height: 27px;
   }
   .main_app header .menu img {
@@ -4290,7 +4293,7 @@
     font-size: 20px;
   }
   .main_app header .left_side nav {
-    display: none;
+    display: none !important;
   }
 }
 @media (min-width: 990px) {

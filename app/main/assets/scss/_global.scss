@@ -159,9 +159,11 @@ $xl: 2560px;
         gap: 58px;
         align-items: center;
         z-index: 5;
-        img {
+        img,
+        svg {
             height: 48px;
-            transform: translateY(5px);
+            max-width: 50vw;
+            transform: translateY(5px); 
         }
         nav {
             display: flex;
@@ -287,8 +289,10 @@ $xl: 2560px;
 @media (max-width: $mobile) {
     header { 
         .left_side {
-            img {
+            img,
+            svg {
                 height: 27px;
+
             }
         }
         .menu {
@@ -328,7 +332,7 @@ $xl: 2560px;
         }
         .left_side {
             nav {
-                display: none;
+                display: none !important;
             }
         }
     }

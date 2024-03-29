@@ -1,87 +1,88 @@
 'use client';
-import React, { useEffect } from 'react';
+import React from "react";
+// import React, { useEffect } from 'react';
 
 //------// Components //------//
-import AnimatedTitle from '../components/titleAnimation';
-import HistoryRow from '../components/historyRow';
-import RecentOrdersRow from '../components/recent_orders_row';
-import PieChart from '../components/charts/pie_chart';
+// import AnimatedTitle from '../components/titleAnimation';
+// import HistoryRow from '../components/historyRow';
+// import RecentOrdersRow from '../components/recent_orders_row';
+// import PieChart from '../components/charts/pie_chart';
 
 //------// Media //------//
-import ChevronDownIconFill from '../media/svgs/chevron_fill_down.svg';
+// import ChevronDownIconFill from '../media/svgs/chevron_fill_down.svg';
 
 //------// Hooks //------//
-import useFetch from '../hooks/useFetch';
-import useDropdown from '../hooks/useDropdown';
+// import useFetch from '../hooks/useFetch';
+// import useDropdown from '../hooks/useDropdown';
 
 
 export default function Statistics() {
-    useDropdown(); 
-    const { loading, error, data } = useFetch(`https://quanmed.ai/wordpress/wp-json/wp/v2/dashboard-pages?slug=statistics`);
-    if (loading) return;
-    if (error) return; 
-    const assets_data = {
-        chart: {
-            type: 'variablepie',
-            backgroundColor: 'transparent',
-        },
-        title: {
-            text: '', 
-        },
-        tooltip: {
-            headerFormat: '',
-            pointFormat: '<span style="color:{point.color}">\u25CF</span> <b>{point.name}'
-        },
-        series: [{
-            minPointSize: 30,
-            innerSize: '70%',
-            borderRadius: 0,
-            data: [
-                {
-                    name: 'BTC',
-                    y: 70,
-                    z: 100
-                },
-                {
-                    name: 'ETH',
-                    y: 13,
-                    z: 97
-                },
-                {
-                    name: 'VHA Token',
-                    y: 10,
-                    z: 96
-                },
-                {
-                    name: 'Others',
-                    y: 7,
-                    z: 95
-                },
-            ],
-            colors: [
-                '#607BCC',
-                '#C292EB',
-                '#99EDF9',
-                '#3966EF',
-            ],
-            dataLabels: {
-                enabled: false // Disable data labels
-            }
-        }],
-    };
+    // useDropdown(); 
+    // const { loading, error, data } = useFetch(`https://quanmed.ai/wordpress/wp-json/wp/v2/dashboard-pages?slug=statistics`);
+    // if (loading) return;
+    // if (error) return; 
+    // const assets_data = {
+    //     chart: {
+    //         type: 'variablepie',
+    //         backgroundColor: 'transparent',
+    //     },
+    //     title: {
+    //         text: '', 
+    //     },
+    //     tooltip: {
+    //         headerFormat: '',
+    //         pointFormat: '<span style="color:{point.color}">\u25CF</span> <b>{point.name}'
+    //     },
+    //     series: [{
+    //         minPointSize: 30,
+    //         innerSize: '70%',
+    //         borderRadius: 0,
+    //         data: [
+    //             {
+    //                 name: 'BTC',
+    //                 y: 70,
+    //                 z: 100
+    //             },
+    //             {
+    //                 name: 'ETH',
+    //                 y: 13,
+    //                 z: 97
+    //             },
+    //             {
+    //                 name: 'VHA Token',
+    //                 y: 10,
+    //                 z: 96
+    //             },
+    //             {
+    //                 name: 'Others',
+    //                 y: 7,
+    //                 z: 95
+    //             },
+    //         ],
+    //         colors: [
+    //             '#607BCC',
+    //             '#C292EB',
+    //             '#99EDF9',
+    //             '#3966EF',
+    //         ],
+    //         dataLabels: {
+    //             enabled: false // Disable data labels
+    //         }
+    //     }],
+    // };
     
     
     
     return (
         <div className="statistics">
             {/* <AnimatedTitle title="Statistics" /> */}
-            <AnimatedTitle title={data[0].title.rendered} />
-            {data[0].acf.page_paragraph && (
+            {/* <AnimatedTitle title={data[0].title.rendered} /> */}
+            {/* data[0].acf.page_paragraph && (
                 <p className="page_paragraph">
                 {data[0].acf.page_paragraph}
                 </p>
-            )}
-            <div className="panels_container">
+            )*/}
+            {/* <div className="panels_container">
                 <div className="two_columns">
                     <div className="panel">
                         <div className="panel_top">
@@ -305,7 +306,7 @@ export default function Statistics() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
