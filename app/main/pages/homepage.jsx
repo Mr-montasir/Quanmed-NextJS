@@ -23,20 +23,20 @@ export default function Homepage() {
   let { activeIndex } = useContext(SwiperContext);
   const { swiperRef } = useContext(SwiperContext);
 
-  const { open, close } = useWeb3Modal()
+  // const { open, close } = useWeb3Modal()
 
   const id = useParams()["*"]
   
   useEffect(() => {
     if (id == 'logout')
       document.getElementById("mydemed").click()
-  }, []);
+  }, [id]);
 
   useEffect(() => {
       if (swiperRef.current && swiperRef.current.swiper) {
       swiperRef.current.swiper.slideTo(activeIndex);
     }
-  }, [activeIndex]);
+  }, [activeIndex, swiperRef]);
   const sectionContentData = [
     {
       id: 0, 

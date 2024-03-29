@@ -195,7 +195,7 @@ export default function NeutronInterface() {
                                     let className;
                                     if (message.type === 'apiMessage') {
                                         icon = (
-                                            <img
+                                            <Image
                                                 key={index}
                                                 src="/bot-image.png"
                                                 alt="AI"
@@ -208,7 +208,7 @@ export default function NeutronInterface() {
                                         className = styles.apimessage;
                                     } else {
                                         icon = (
-                                            <img
+                                            <Image
                                                 key={index}
                                                 src="/usericon.png"
                                                 alt="Me"
@@ -225,7 +225,7 @@ export default function NeutronInterface() {
                                                 : styles.usermessage;
                                     }
                                     return (
-                                        <div style={{ padding: '20px' }}>
+                                        <div style={{ padding: '20px' }} key={index}>
                                             <div key={`chatMessage-${index}`} className={className} style={{ backgroundColor: "rgba(0,0,0,0)", color: "white" }}>
                                                 {icon}
                                                 <div className={styles.markdownanswer} style={{ marginLeft: 20 }}>
@@ -269,7 +269,7 @@ export default function NeutronInterface() {
                                 })}
                                 {
                                     typing && <div style={{ padding: 20 }}>
-                                        <img src='/loading.svg' />
+                                        <Image src='/loading.svg' alt='Loading Neutron' />
                                         <span style={{ color: 'white' }}> Neutron is typing...</span>
                                     </div>
                                 }

@@ -21,7 +21,7 @@ import Twitter from '../media/svgs/social/x_twitter.svg';
 import Facebook from '../media/svgs/social/facebook.svg';
 import Message from '../media/svgs/social/message_icon.svg';
 import { useAuth } from '../../hooks/use-auth';
-import { useWeb3Modal } from '@web3modal/wagmi/react';
+// import { useWeb3Modal } from '@web3modal/wagmi/react';
 // import { useAccount, useDisconnect } from 'wagmi';
 
 export default function SideBar() {
@@ -52,7 +52,7 @@ export default function SideBar() {
     return (
         <div className='main_sidebar'>
             <div className="logo_container" onClick={() => { OpenSideBar() }}>
-                <Image src={WebsiteLogo} />
+                <Image src={WebsiteLogo} alt='Quanmed Logo' />
                 <span>My DeMed</span>
             </div>
             {/* <Link className="dashboard_tab" to="/mydemed" onClick={() => { OpenSideBar() }}>

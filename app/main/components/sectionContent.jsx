@@ -111,7 +111,7 @@ export default function SectionContent(props) {
           <div className='paragraph' dangerouslySetInnerHTML={{ __html: props.paragraph }}></div>
         )}
         {props.section_img && (
-          <img src={props.section_img} className='section_img' />
+          <Image src={props.section_img} className='section_img' alt='Section Image' />
         )}
         {props.button && props.buttonLink && (
           <Link

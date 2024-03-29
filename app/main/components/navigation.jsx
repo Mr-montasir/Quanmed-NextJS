@@ -38,7 +38,7 @@ const Navigation = ()=> {
         <header className='main_nav'>
             <div className="left_side">
                 <Link href="/" onClick={closeMenu}> 
-                    <Image src={Logo} />
+                    <Image src={Logo} alt='MyDemed Logo' />
                 </Link>
                 <nav> 
                     <div className="dropdown_container">

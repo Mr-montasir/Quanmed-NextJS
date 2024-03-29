@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { useWeb3Modal } from '@web3modal/wagmi/react'
+// import { useWeb3Modal } from '@web3modal/wagmi/react'
 import { useAccount } from 'wagmi';
 import { useAuth } from '../../../hooks/use-auth';
 /*-------------// Media //------------*/
@@ -95,7 +95,7 @@ export function SignUpPopup({ onClose, onSwitchPopup }) {
                         <div className="field_container">
                             <input type='email' name='email' id='sign_up_email' onChange={(ev) => checkInput(ev)} />
                             <label htmlFor="sign_up_email">Email address</label>
-                            <span className="error_message">That format doesn't look right. Make sure there aren't any typos.</span>
+                            <span className="error_message">That format doesn&apos;t look right. Make sure there aren&apos;t any typos.</span>
                         </div>
                         <div className="field_container">
                             <input type='password' name='password' id='sign_up_password' onChange={(ev) => checkInput(ev)} />
@@ -124,7 +124,7 @@ export function SignInPopup({ onClose, onSwitchPopup }) {
     const [data, setData] = useState({ acceptance: false })
 
     const auth = useAuth(); 
-    const { open } = useWeb3Modal()
+    // const { open } = useWeb3Modal()
     const { isConnected, address } = useAccount()
 
     useEffect(() => {
@@ -132,7 +132,7 @@ export function SignInPopup({ onClose, onSwitchPopup }) {
             auth.signinWithWallet(address);
             navigator('/mydemed');
         }
-    }, [isConnected])
+    }, [isConnected, auth, address])
     const validateEmail = (email) => {
         return String(email).toLowerCase().match(
             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -208,7 +208,7 @@ export function SignInPopup({ onClose, onSwitchPopup }) {
                         <div className="field_container">
                             <input type='email' name='email' id='sign_in_email' onChange={(ev) => checkInput(ev)} />
                             <label htmlFor="sign_in_email">Email address</label>
-                            <span className="error_message">That format doesn't look right. Make sure there aren't any typos.</span>
+                            <span className="error_message">That format doesn&apos;t look right. Make sure there aren&apos;t any typos.</span>
                         </div>
                         <div className="field_container">
                             <input type='password' name='password' id='sign_in_password' onChange={(ev) => checkInput(ev)} />
@@ -287,7 +287,7 @@ export function PasswordResetPopup({ onClose }) {
                         <div className="field_container">
                             <input type='email' id='sign_in_email' onChange={(ev) => { checkInput(ev) }} />
                             <label htmlFor="sign_in_email">Email address</label>
-                            <span className="error_message">That format doesn't look right. Make sure there aren't any typos.</span>
+                            <span className="error_message">That format doesn&apos;t look right. Make sure there aren&apos;t any typos.</span>
                         </div>
                         <div className="acceptance">
                             <input type="checkbox" id="acceptance" onChange={(ev) => { checkInput(ev) }} />

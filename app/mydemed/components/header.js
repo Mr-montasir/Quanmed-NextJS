@@ -23,11 +23,11 @@ export default function Header() {
         <header className='main_nav'>
             {renderPopup()} 
             {/* <Image /> */}
-            <Image src={main_logo} className="main_logo" onClick={() => { OpenSideBar() }} />
+            <Image src={main_logo} className="main_logo" alt='Quanmed Logo' onClick={() => { OpenSideBar() }} />
             <Link href=""> <ScannerIcon /> </Link>
             <Link href=""> <NotificationIcon /> </Link>
             <Link href=""> <InterrogationIcon /> </Link>
-            <Image src={user_img} className="user_img" onClick={() => openPopup('SignUp')} />
+            <Image src={user_img} className="user_img" onClick={() => openPopup('SignUp')} alt='user Image' />
         </header>
     )
 }

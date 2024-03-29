@@ -37,26 +37,26 @@ export default function QuarkReflection() {
                         <span>Atoms</span> 
                     </div>
                     <div className="right_side">
-                        <Image src={CoreImage} className='core_image' />
+                        <Image src={CoreImage} className='core_image' alt='Core Image' />
                         <div className="bottom_atoms">
                             <div className="single_atom">
-                                <Image src={AtomGif} className='single_atom' />
+                                <Image src={AtomGif} className='single_atom' alt='Single Atom'/>
                                 <span>C</span>
                             </div>
                             <div className="single_atom">
-                                <Image src={AtomGif} className='single_atom' />
+                                <Image src={AtomGif} className='single_atom' alt='Single Atom' />
                                 <span>H</span>
                             </div>
                             <div className="single_atom">
-                                <Image src={AtomGif} className='single_atom' />
+                                <Image src={AtomGif} className='single_atom' alt='Single Atom' />
                                 <span>N</span>
                             </div>
                             <div className="single_atom">
-                                <Image src={AtomGif} className='single_atom' />
+                                <Image src={AtomGif} className='single_atom' alt='Single Atom' />
                                 <span>O</span>
                             </div>
                             <div className="single_atom">
-                                <Image src={AtomGif} className='single_atom' />
+                                <Image src={AtomGif} className='single_atom' alt='Single Atom' />
                                 <span>P</span>
                             </div>
                         </div>

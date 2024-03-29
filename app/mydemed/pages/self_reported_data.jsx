@@ -284,7 +284,7 @@ export default function SelfReportedData() {
                 >
                     {apps_data.map((app_inf) => (
                         app_inf.app_status == "Connected" ? (
-                            <SwiperSlide>
+                            <SwiperSlide key={app_inf.id}>
                                 <AppCard 
                                     key={app_inf.id}
                                     appname={app_inf.appname}

@@ -115,7 +115,7 @@ export default function HedronConnect() {
                 >
                     {users_data.map((user_inf) => (
                         user_inf.user_status == "Connected" ? (
-                            <SwiperSlide>
+                            <SwiperSlide key={user_inf.id}>
                                 <ChemmistCard 
                                     key={user_inf.id}
                                     username={user_inf.username}
