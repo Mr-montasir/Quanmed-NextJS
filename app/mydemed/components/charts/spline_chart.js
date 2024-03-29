@@ -50,6 +50,6 @@ export default function SplineChart(props) {
                 highcharts={Highcharts}
                 options={charts_data}
             />
-        </div>
+        </div> 
     )
 }
