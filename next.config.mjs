@@ -1,6 +1,5 @@
 // next.config.mjs
 const nextConfig = {
-  output: 'export',
   webpack: (config) => {
     config.module.rules.push(
       {
