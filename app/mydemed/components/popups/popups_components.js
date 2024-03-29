@@ -10,7 +10,7 @@ import CheckIcon from '../../media/svgs/check_circle.svg';
 import EmailIcon from '../../media/svgs/email.svg';
 import Link from 'next/link';
 import { usePopupFunctions } from '../../hooks/popups';
-import FacebookLogin from 'react-facebook-login';
+// import FacebookLogin from 'react-facebook-login';
 
 export function SignUpPopup({ onClose, onSwitchPopup }) {
 
