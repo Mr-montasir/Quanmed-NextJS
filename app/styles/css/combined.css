@@ -1,0 +1,5472 @@
+/*--------------------------------------------|
+|                   FONTS                     |
+|--------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+/*--------------------------------------------|
+|                   COLORS                    |
+|--------------------------------------------*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&display=swap");
+:root {
+  --page_background: #000;
+  --panel_background: rgba(20, 27, 34, 0.70);
+  --main_blue: #607BCC;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.quanmed_dashboard_app {
+  /*--------------------------------------------|
+  |                   PAGES                     |
+  |--------------------------------------------*/
+  /*--------------------------------------------|
+  |                   MIXINS                    |
+  |--------------------------------------------*/
+  min-height: 100vh;
+  background: var(--page_background);
+  display: flex;
+  gap: 0;
+  align-items: flex-start;
+  max-width: 2600px;
+  margin-left: auto;
+  margin-right: auto;
+  /*=====================================|
+  |               Popups                 |
+  |=====================================*/
+  /*==========================================|
+  |              Messages Popups              |
+  |==========================================*/
+}
+.quanmed_dashboard_app .panel {
+  background: var(--panel_background);
+}
+.quanmed_dashboard_app * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+.quanmed_dashboard_app img {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.quanmed_dashboard_app .main_sidebar {
+  background: var(--panel_background);
+  width: 300px;
+  min-height: 100vh;
+  max-height: 100vh;
+  height: 100vh;
+  overflow-y: scroll;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.quanmed_dashboard_app .main_sidebar .logo_container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background: #0e1318;
+  padding-top: 29px;
+  padding-right: 41px;
+  padding-bottom: 4px;
+  padding-left: 37px;
+  margin-bottom: 35px;
+}
+.quanmed_dashboard_app .main_sidebar .logo_container img {
+  width: 100%;
+  transition: 0.3s;
+  transform-origin: left;
+}
+.quanmed_dashboard_app .main_sidebar .logo_container img:hover {
+  transform: scale(1.03);
+}
+.quanmed_dashboard_app .main_sidebar .logo_container span {
+  color: rgba(249, 250, 251, 0.7);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  text-transform: capitalize;
+  padding-left: 30px;
+  transition: 0.3s;
+  transform-origin: left;
+}
+.quanmed_dashboard_app .main_sidebar .logo_container span:hover {
+  letter-spacing: 1px;
+  color: var(--main_blue);
+}
+.quanmed_dashboard_app .main_sidebar .dashboard_tab {
+  border: 2px solid #607BCC;
+  padding: 20px 42px;
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.quanmed_dashboard_app .main_sidebar .dashboard_tab svg {
+  width: 18px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.quanmed_dashboard_app .main_sidebar .dashboard_tab span {
+  color: #607BCC;
+  font-size: 15px;
+  font-weight: 700;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: calc(100% - 250px);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container {
+  padding-left: 18px;
+  padding-right: 35px;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 50px;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_heading {
+  color: #6E7481;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.52px;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item .menu_control.current {
+  border: 1px solid var(--main_blue);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item.dropdown_container .dropdown_content {
+  margin: 8px 14px;
+  margin-top: 4px;
+  margin-left: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item.dropdown_container .dropdown_content::before {
+  content: "";
+  height: 100%;
+  width: 2px;
+  background: rgba(250, 251, 252, 0.5);
+  position: absolute;
+  top: 0;
+  right: calc(100% + 20px);
+  border-radius: 5px;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item.dropdown_container .dropdown_content a {
+  padding: 5px 12px;
+  color: #C0C5D2;
+  font-size: 16px;
+  position: relative;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item.dropdown_container .dropdown_content a.current::before {
+  background: var(--main_blue);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item.dropdown_container .dropdown_content a:hover:not(.current)::before {
+  background: white;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item.dropdown_container .dropdown_content a::before {
+  content: "";
+  height: 80%;
+  width: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: calc(100% + 20px);
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item .menu_control {
+  height: 40px;
+  padding: 8px 14px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item .menu_control svg {
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item .menu_control span {
+  color: #C0C5D2;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container .menu_item .menu_control svg {
+  width: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:first-child .menu_item:not(.dropdown_container) .menu_control:hover {
+  background: rgba(96, 123, 204, 0.0745098039);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:first-child .menu_item:not(.dropdown_container) .menu_control:hover span {
+  letter-spacing: 0.5px;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:first-child .menu_item:not(.dropdown_container) .menu_control:hover svg {
+  transform: scale(1.1);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:first-child .menu_item:not(.dropdown_container) .menu_control:hover svg path {
+  fill: #0d93f7;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:first-child .menu_item.dropdown_container .menu_control:hover {
+  background: rgba(96, 123, 204, 0.0745098039);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:first-child .menu_item.dropdown_container .menu_control:hover span {
+  letter-spacing: 0.5px;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:first-child .menu_item.dropdown_container .menu_control:hover svg {
+  transform: scale(1.1);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:first-child .menu_item.dropdown_container .menu_control:hover svg path {
+  stroke: #0d93f7;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:nth-child(2) .menu_item .menu_control:hover {
+  background: rgba(96, 123, 204, 0.0745098039);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:nth-child(2) .menu_item .menu_control:hover span {
+  letter-spacing: 0.5px;
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:nth-child(2) .menu_item .menu_control:hover svg {
+  transform: scale(1.1);
+}
+.quanmed_dashboard_app .main_sidebar .menu_content .links_container:nth-child(2) .menu_item .menu_control:hover svg path {
+  stroke: #0d93f7;
+}
+.quanmed_dashboard_app .main_sidebar .menu_bottom {
+  padding: 50px 50px 30px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: auto;
+  gap: 50px;
+  border-top: 2px solid #EFEFEF;
+}
+.quanmed_dashboard_app .main_sidebar .menu_bottom .logout {
+  color: rgba(250, 251, 252, 0.8);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 22.254px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.quanmed_dashboard_app .main_sidebar .menu_bottom .logout svg {
+  width: 27px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.quanmed_dashboard_app .main_sidebar .menu_bottom .social_icons {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.quanmed_dashboard_app .main_sidebar .menu_bottom .social_icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .main_sidebar .menu_bottom .social_icons a svg {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.quanmed_dashboard_app .main_sidebar .menu_bottom .social_icons a:hover {
+  border-color: white;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .main_sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    transform: translateX(-100%);
+    background: #0e1318;
+    z-index: 20;
+    transition: 0.3s;
+  }
+  .quanmed_dashboard_app .main_sidebar .logo_container {
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-direction: column;
+  }
+  .quanmed_dashboard_app .main_sidebar .logo_container img {
+    height: 35px;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .quanmed_dashboard_app .main_sidebar .logo_container span {
+    display: block;
+    font-size: 16px;
+  }
+  .quanmed_dashboard_app .main_sidebar.open {
+    transform: translateX(0);
+  }
+}
+.quanmed_dashboard_app .main_nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  width: 100%;
+}
+.quanmed_dashboard_app .main_nav .main_logo {
+  display: none;
+}
+.quanmed_dashboard_app .main_nav .user_img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .main_nav a {
+  height: 42px;
+  width: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14.296px;
+  background: rgba(20, 27, 34, 0.7);
+  transition: 0.15s;
+}
+.quanmed_dashboard_app .main_nav a:hover {
+  background: rgb(20, 27, 34);
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .main_nav {
+    margin-bottom: 30px;
+    padding-top: 10px;
+    justify-content: center;
+  }
+  .quanmed_dashboard_app .main_nav .main_logo {
+    display: block;
+    height: 30px;
+  }
+  .quanmed_dashboard_app .main_nav .user_img {
+    width: 30px;
+    height: 30px;
+  }
+  .quanmed_dashboard_app .main_nav a {
+    height: 30px;
+    width: 30px;
+  }
+  .quanmed_dashboard_app .main_nav a svg {
+    height: 60%;
+    width: 60%;
+  }
+}
+.quanmed_dashboard_app .main_dashboard {
+  display: flex;
+  flex-direction: column;
+}
+.quanmed_dashboard_app .main_dashboard .panels_container .panel .panel_top .left_side .navigation_keys {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 6px;
+}
+.quanmed_dashboard_app .main_dashboard .panels_container .panel .panel_top .left_side .navigation_keys .color.gray {
+  color: #8F8F8F;
+}
+.quanmed_dashboard_app .main_dashboard .panels_container .panel .panel_top .left_side .navigation_keys .color.blue {
+  color: #607BCC;
+}
+.quanmed_dashboard_app .main_dashboard .panels_container .panel .panel_top .left_side .navigation_keys .color.pink {
+  color: #C292EB;
+}
+.quanmed_dashboard_app .main_dashboard .panels_container .panel #health_history_charts {
+  margin-top: 30px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) {
+  width: 143%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .left_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(194, 146, 235, 0.62);
+  position: relative;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .left_icon::after {
+  content: "";
+  height: 110%;
+  width: 110%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  border: 1px solid rgba(194, 146, 235, 0.62);
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .left_icon svg {
+  width: 28px;
+  height: 28px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .feed_content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: calc(100% - 150px);
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .feed_content .feed_title {
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 500;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .feed_content .feed_time {
+  color: #8F8F8F;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 6px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .status.applying {
+  color: #607BCC;
+  border: 1px solid #607BCC;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .status.completed {
+  color: #C292EB;
+  border: 1px solid #C292EB;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .panel_content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .date {
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #1B1C31;
+  box-shadow: 0px 4px 26px 0px rgba(111, 111, 114, 0.12);
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .date .day {
+  color: #C292EB;
+  text-align: center;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .date .day_number {
+  color: #EFEFEF;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_content {
+  width: calc(100% - 150px);
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_content .appointment_title {
+  color: #FAFBFC;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_content .appointment_time {
+  color: #8F8F8F;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_dots {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  gap: 4px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  padding: 6px;
+  background: #1B1C31;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_dots .apn_circle {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: gray;
+}
+.quanmed_dashboard_app .main_dashboard .vertical_chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  width: 100%;
+  height: 530px;
+  display: none;
+  font-size: 50px;
+  color: white;
+}
+.quanmed_dashboard_app .main_dashboard .vertical_chart > div {
+  width: 100%;
+  height: 100%;
+}
+.quanmed_dashboard_app .main_dashboard .vertical_chart .highcharts-credits {
+  display: none;
+}
+.quanmed_dashboard_app .main_dashboard .vertical_chart .highcharts-series path {
+  stroke: #0e1318;
+  stroke-linecap: round !important;
+  border-radius: 20px;
+  stroke-width: 5px;
+}
+.quanmed_dashboard_app .main_dashboard .vertical_chart .highcharts-yaxis-grid path {
+  stroke: rgba(247, 248, 250, 0.07);
+}
+.quanmed_dashboard_app .main_dashboard .vertical_chart.show {
+  display: flex;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row {
+  display: flex;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .col_1:not(:nth-child(1)) {
+  text-align: center;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row:nth-child(1) .company_info .ds_icon {
+  border-color: #C292EB;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row:nth-child(1) .company_info .ds_icon svg path {
+  stroke: #C292EB;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row:nth-child(2) .company_info .ds_icon {
+  border-color: #fff;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row:nth-child(2) .company_info .ds_icon svg path {
+  stroke: #fff;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row:nth-child(3) .company_info .ds_icon {
+  border-color: #607BCC;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row:nth-child(3) .company_info .ds_icon svg path {
+  stroke: #607BCC;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #C292EB;
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_icon svg {
+  width: 25px;
+  height: 25px;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_icon svg path {
+  stroke: #C292EB;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_content .ds_name {
+  color: #F4F0FF;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_content .ds_country {
+  color: #475D96;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_date,
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_date_2,
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_amount {
+  color: #6E86C2;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_amount {
+  color: white;
+}
+.quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_token {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: capitalize;
+  background: linear-gradient(180deg, #C292EB 0%, #607BCC 48.96%, #99EDF9 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .main_dashboard .panels_container .panel .panel_top .left_side .navigation_keys .color {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .main_dashboard .panels_container .panel #health_history_charts {
+    margin-top: 10px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns {
+    flex-direction: column;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) {
+    width: 100%;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .left_icon {
+    width: 28px;
+    height: 28px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .left_icon svg {
+    width: 80%;
+    height: 80%;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .feed_content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: calc(100% - 150px);
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .feed_content .feed_title {
+    color: #FAFBFC;
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .feed_content .feed_time {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(1) .panel_content .activity_feed .status {
+    padding: 3px 5px;
+    font-size: 11px;
+    font-weight: 500;
+    margin-left: auto;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .panel_content {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .date {
+    padding: 5px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .date .day {
+    font-size: 12px;
+    width: 30px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .date .day_number {
+    font-size: 11px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_content .appointment_title {
+    font-size: 13px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_content .appointment_time {
+    font-size: 11px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_dots {
+    width: 20px;
+    gap: 3px;
+    padding: 4px;
+  }
+  .quanmed_dashboard_app .main_dashboard .two_columns .panel:nth-child(2) .appointment_row .appointment_dots .apn_circle {
+    height: 3px;
+    width: 3px;
+  }
+  .quanmed_dashboard_app .main_dashboard .vertical_chart {
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+  }
+  .quanmed_dashboard_app .main_dashboard .vertical_chart .highcharts-series path {
+    stroke-width: 2;
+  }
+  .quanmed_dashboard_app .main_dashboard .vertical_chart .highcharts-axis-labels text {
+    font-size: 9px !important;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .col_1:first-child {
+    width: 200%;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .col_1:first-child {
+    width: 200%;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info {
+    gap: 6px;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_icon {
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_icon svg {
+    width: 60%;
+    height: 60%;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_content .ds_name {
+    font-size: 7px;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .company_info .ds_content .ds_country {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_date,
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_date_2,
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_amount {
+    font-size: 7.5px;
+  }
+  .quanmed_dashboard_app .main_dashboard .sl_table .table_body .ds_data_row .ds_token {
+    font-size: 7.5px;
+    display: block;
+  }
+}
+.quanmed_dashboard_app .statistics .two_columns {
+  display: flex;
+  gap: 17px;
+  width: 100%;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel {
+  width: 100%;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart svg path {
+  stroke-width: 0;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .highcharts-credits {
+  display: none;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item {
+  border-radius: 5.411px;
+  background: rgba(26, 113, 255, 0.1);
+  padding: 6px 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item .chart_color {
+  height: 14px;
+  width: 14px;
+  border-radius: 2.164px;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item .chart_color.btc {
+  background: #607BCC;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item .chart_color.eth {
+  background: #C292EB;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item .chart_color.vha {
+  background: #99EDF9;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item .chart_color.others {
+  background: #3966EF;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item .chart_name {
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 600;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .panel_top .right_side .button_dropdown {
+  z-index: 10;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .panel_top .right_side .button_dropdown .button_trigger {
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  border-color: #30363f !important;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper {
+  width: 100%;
+  height: 70px;
+  position: relative;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper:nth-child(1) {
+  z-index: 2;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper:nth-child(2) {
+  z-index: 1;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper.from span {
+  color: #607BCC;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper.to span {
+  color: #C292EB;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper input {
+  height: 100%;
+  width: 100%;
+  padding: 2px 7px 2px 17px;
+  border-radius: 7px;
+  background: rgba(0, 0, 0, 0.2);
+  border: transparent;
+  outline: none;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper input::-webkit-outer-spin-button, .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  border: 2px solid #6b6d70;
+  color: rgba(250, 251, 252, 0.54);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px 10px;
+  gap: 12px;
+  background: #0b0f13;
+  min-width: 80px;
+  justify-content: center;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_trigger .three_dots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_trigger .three_dots .sl_dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #3b424c;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_trigger:hover {
+  background: #11171d;
+  border-color: rgba(250, 251, 252, 0.7);
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_dropdown_content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 0 rgba(96, 123, 204, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_dropdown_content .dropdown_option {
+  padding: 3px 12px;
+  white-space: nowrap;
+  border-radius: 5px;
+  color: rgba(250, 251, 252, 0.54);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+  font-size: 12px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_dropdown_content .dropdown_option:hover {
+  background: rgba(250, 251, 252, 0.05);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_dropdown_content .dropdown_option.choosen_option {
+  border-color: white;
+  color: white;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown.open .button_dropdown_content {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(10px);
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background: transparent;
+  width: 100%;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 8px;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency button:hover {
+  background: white;
+  color: black;
+}
+.quanmed_dashboard_app .statistics .two_columns .panel .convert_currency p {
+  color: #626D7D;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.43em;
+}
+.quanmed_dashboard_app .statistics .panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #262a2f;
+  padding-bottom: 20px;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_icon.up svg {
+  transform: rotate(180deg);
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_icon.up svg circle {
+  fill: #99EDF9;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_icon.up svg path {
+  stroke: #99EDF9;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_icon.down svg circle {
+  fill: #607BCC;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_icon.down svg path {
+  stroke: #607BCC;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_name {
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 2.35em;
+  text-align: left;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_amount {
+  color: #607BCC;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.87em;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_time {
+  color: #FAFBFC;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.87em;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_status .status {
+  font-size: 13px;
+  padding: 5px 8px;
+  border-radius: 6px;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_status .status.pending {
+  background: rgba(153, 237, 249, 0.4117647059);
+  color: #99EDF9;
+}
+.quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_status .status.success {
+  background: rgba(96, 123, 204, 0.43);
+  color: #607BCC;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_head {
+  display: flex;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_head .ro_title {
+  color: #607BCC;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_head .ro_title.amount_title {
+  width: 100%;
+  text-align: center;
+  font-size: 10px !important;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_head .ro_title.orders_title {
+  width: 200%;
+  font-size: 10px !important;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row:nth-child(2) .icon_container {
+  background: #c292eb;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row:nth-child(3) .icon_container {
+  background: #598991;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .icon_container {
+  background: #607bcc;
+  height: 60px;
+  width: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .icon_container svg {
+  width: 50%;
+  height: 50%;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .icon_container svg circle,
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .icon_container svg path {
+  stroke: white;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .orders {
+  width: 200%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .orders .orders_content {
+  display: flex;
+  flex-direction: column;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .orders .orders_content .name {
+  color: #F4F0FF;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .orders .orders_content .duration {
+  color: #607BCC;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .amount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 7.611px;
+  border: 1px solid #607BCC;
+  height: 50px;
+  color: rgba(153, 237, 249, 0.54);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .statistics .panel .data_analysis .data_title {
+  color: #607BCC;
+  font-size: 16.87px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-top: 20px;
+}
+.quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart .chart_column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0px;
+  min-height: 360px;
+  align-items: center;
+}
+.quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart .chart_column .chart_value {
+  margin-bottom: 20px;
+  width: 40px;
+  border-radius: 24.1px;
+  background: linear-gradient(180deg, #607BCC 0%, rgba(96, 123, 204, 0.04) 100%);
+}
+.quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart .chart_column .chart_numbers {
+  color: #FAFBFC;
+  font-family: Poppins;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart .chart_column .chart_name {
+  color: #607BCC;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .statistics .two_columns {
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel {
+    width: calc(50% - 10px);
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .pie_chart {
+    margin: 0 auto;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .highcharts-container {
+    height: 130px !important;
+    max-width: 100%;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .highcharts-credits {
+    display: none;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item {
+    border-radius: 5px;
+    background: rgba(26, 113, 255, 0.1);
+    padding: 4px;
+    gap: 2px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item .chart_color {
+    height: 4px;
+    width: 4px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .pie_chart .chart_keys .chart_item .chart_name {
+    font-size: 6px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .panel_top .right_side .button_dropdown .button_trigger {
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency {
+    gap: 7px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper {
+    height: 30px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper input {
+    height: 100%;
+    width: 100%;
+    padding: 2px 3px 2px 7px;
+    font-size: 11px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_trigger {
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #6b6d70;
+    font-size: 8px;
+    padding: 3px 3px;
+    gap: 7px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_dropdown_content {
+    padding: 5px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency .input_wrapper .button_dropdown .button_dropdown_content .dropdown_option {
+    padding: 5px;
+    font-size: 9px;
+    min-width: 50px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency button {
+    height: 30px;
+    border-radius: 3px;
+    font-size: 11px;
+  }
+  .quanmed_dashboard_app .statistics .two_columns .panel .convert_currency p {
+    font-size: 7px;
+  }
+  .quanmed_dashboard_app .statistics .panel {
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .statistics .panel .panel_heading {
+    font-size: 11px !important;
+    text-transform: capitalize;
+  }
+  .quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row {
+    padding-bottom: 10px;
+    align-items: center;
+  }
+  .quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_icon {
+    width: 20%;
+  }
+  .quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_icon svg {
+    width: 100%;
+  }
+  .quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_name {
+    font-size: 10px;
+    padding-left: 5px;
+  }
+  .quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_amount {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_time {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_status {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .quanmed_dashboard_app .statistics .panel .sl_table .table_body .history_row .hs_status .status {
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_head {
+    display: flex;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_head .ro_title.amount_title {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_head .ro_title.orders_title {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content {
+    margin-top: 10px;
+    gap: 15px;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row {
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .icon_container {
+    height: 18px;
+    width: 18px;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .icon_container svg {
+    width: 60%;
+    height: 60%;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .orders {
+    width: 200%;
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .orders .orders_content .name {
+    font-size: 8px;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .orders .orders_content .duration {
+    font-size: 7px;
+  }
+  .quanmed_dashboard_app .statistics .panel .recent_orders .recent_orders_content .recent_orders_row .amount {
+    width: 50%;
+    border-radius: 3px;
+    height: 20px;
+    font-size: 8px;
+    font-weight: 400;
+    padding: 2px 4px;
+  }
+  .quanmed_dashboard_app .statistics .panel .data_analysis .data_title {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart {
+    gap: 1px;
+    margin-top: 10px;
+  }
+  .quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart .chart_column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0px;
+    min-height: 130px;
+    align-items: center;
+  }
+  .quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart .chart_column .chart_value {
+    margin-bottom: 6px;
+    width: 15px;
+  }
+  .quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart .chart_column .chart_numbers {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .statistics .panel .data_analysis .manual_vertical_chart .chart_column .chart_name {
+    font-size: 6.5px;
+  }
+}
+.quanmed_dashboard_app .hadron_connect .form_filter {
+  display: flex;
+  height: 60px;
+  gap: 35px;
+  width: 100%;
+  margin-top: 25px;
+}
+.quanmed_dashboard_app .hadron_connect .form_filter .search_container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #F5F5F7;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quanmed_dashboard_app .hadron_connect .form_filter .search_container svg {
+  width: 20px;
+  height: 20px;
+}
+.quanmed_dashboard_app .hadron_connect .form_filter .search_container input {
+  width: calc(100% - 40px);
+  text-align: right;
+  color: #FAFBFC;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.12px;
+  border: 0;
+  outline: none;
+}
+.quanmed_dashboard_app .hadron_connect .form_filter .filter_options {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  gap: 24px;
+}
+.quanmed_dashboard_app .hadron_connect .form_filter .filter_options .f_option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #F5F5F7;
+  gap: 12px;
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.24px;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .hadron_connect section {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.quanmed_dashboard_app .hadron_connect section .swiper {
+  width: 100%;
+}
+.quanmed_dashboard_app .hadron_connect section .swiper .swiper-wrapper {
+  max-width: 100%;
+}
+.quanmed_dashboard_app .hadron_connect section h2 {
+  color: white;
+  margin-bottom: 18px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card {
+  border-radius: 12.685px;
+  background: rgba(20, 27, 34, 0.7);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .person_info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .person_info .user_icon svg {
+  height: 50px;
+  width: 50px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .person_info .name_role .name {
+  color: #FAFBFC;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  letter-spacing: -0.32px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .person_info .name_role .role {
+  color: #D9D9D9;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.12px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .user_status {
+  color: #607BCC;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .user_description {
+  color: #D9D9D9;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8em;
+  font-family: "Inter", sans-serif;
+  margin-top: 8px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom {
+  display: flex;
+  gap: 10px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt svg {
+  width: 25px;
+  height: 25px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt span {
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: -0.28px;
+}
+.quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt:last-child {
+  justify-content: flex-end;
+}
+.quanmed_dashboard_app .hadron_connect section .chemists_grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 90%;
+  grid-column-gap: 32px;
+  grid-row-gap: 28px;
+  width: 100%;
+}
+.quanmed_dashboard_app .hadron_connect section .chemists_grid .chemist_card {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .hadron_connect {
+    padding-bottom: 50px;
+  }
+  .quanmed_dashboard_app .hadron_connect .form_filter {
+    display: flex;
+    height: 30px;
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .hadron_connect .form_filter .search_container {
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px 5px;
+    gap: 4px;
+  }
+  .quanmed_dashboard_app .hadron_connect .form_filter .search_container svg {
+    width: 10px;
+    height: 10px;
+  }
+  .quanmed_dashboard_app .hadron_connect .form_filter .search_container input {
+    width: calc(100% - 10px);
+    font-size: 9px;
+    text-align: left;
+  }
+  .quanmed_dashboard_app .hadron_connect .form_filter .filter_options {
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .hadron_connect .form_filter .filter_options .f_option {
+    gap: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 6.5px;
+    font-weight: 400;
+  }
+  .quanmed_dashboard_app .hadron_connect .form_filter .filter_options .f_option svg {
+    width: 15px;
+    height: 15px;
+  }
+  .quanmed_dashboard_app .hadron_connect .form_filter .filter_options .f_option span {
+    font-size: inherit;
+  }
+  .quanmed_dashboard_app .hadron_connect section {
+    margin-top: 20px;
+  }
+  .quanmed_dashboard_app .hadron_connect section.slider_first {
+    display: none;
+  }
+  .quanmed_dashboard_app .hadron_connect section h2 {
+    margin-bottom: 12px;
+    font-size: 16px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemists_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 90%;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    min-width: 100%;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemists_grid .chemist_card {
+    width: 100%;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card {
+    border-radius: 7px;
+    padding: 10px;
+    gap: 8px !important;
+    width: 100%;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .person_info {
+    gap: 2px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .person_info .user_icon svg {
+    height: 30px;
+    width: 30px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .person_info .name_role .name {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .person_info .name_role .role {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_top .user_status {
+    font-size: 7px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .user_description {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom {
+    gap: 0;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt {
+    gap: 3px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt svg {
+    width: 14px;
+    height: 14px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt span {
+    font-size: 8px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt:nth-child(2) {
+    gap: 3px;
+  }
+  .quanmed_dashboard_app .hadron_connect section .chemist_card .card_bottom .icon_txt:nth-child(2) span {
+    font-size: 6px;
+  }
+}
+.quanmed_dashboard_app .rewards {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+.quanmed_dashboard_app .rewards .two_columns {
+  display: flex;
+  gap: 38px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column {
+  width: 200%;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts {
+  display: flex;
+  gap: 15px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel {
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 11.916px;
+  background: rgba(20, 27, 34, 0.7);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  transform: translateX(50%);
+  border-radius: 90px;
+  background: #99EDF9;
+  height: 70px;
+  top: 25px;
+  width: 12px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel.down::before {
+  background: #607BCC;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .reward_heading {
+  color: #D9D9D9;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2.3em;
+  letter-spacing: -0.237px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown {
+  position: relative;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_trigger .three_dots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_trigger .three_dots .sl_dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #3b424c;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_trigger:hover {
+  background: rgba(250, 251, 252, 0.05);
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_dropdown_content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 0 rgba(96, 123, 204, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_dropdown_content .dropdown_option {
+  padding: 3px 12px;
+  white-space: nowrap;
+  border-radius: 5px;
+  color: rgba(250, 251, 252, 0.54);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+  font-size: 12px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_dropdown_content .dropdown_option:hover {
+  background: rgba(250, 251, 252, 0.05);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_dropdown_content .dropdown_option.choosen_option {
+  border-color: white;
+  color: white;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown.open .button_dropdown_content {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(5px);
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content {
+  display: flex;
+  flex-direction: column;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content .reward_analyse {
+  margin: 10px 0;
+  color: #FAFBFC;
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 1.3em;
+  letter-spacing: -0.406px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content .rewards_bottom {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content .rewards_bottom svg {
+  width: 30px;
+  height: 30px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content .rewards_bottom span {
+  color: #D9D9D9;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.3em;
+  letter-spacing: -0.237px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  margin-top: 35px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top h2 {
+  color: #FAFBFC;
+  font-family: Poppins;
+  font-size: 22.545px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.3em;
+  letter-spacing: -0.406px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top .toggle_bar {
+  background: #222338;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 15px;
+  padding: 5px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top .toggle_bar .toggle_option {
+  border-radius: 15px;
+  border: 1px solid transparent;
+  padding: 10px 15px;
+  color: #FAFBFC;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top .toggle_bar .toggle_option:hover {
+  border: 1px solid #607BCC;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top .toggle_bar .toggle_option.current {
+  opacity: 1;
+  border: 1px solid #607BCC;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report nav {
+  display: none;
+  margin-top: 20px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report nav.show {
+  display: flex;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report nav .nav_option {
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  border-bottom: 2px solid transparent;
+  color: #FAFBFC;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report nav .nav_option:hover {
+  border-color: rgba(255, 255, 255, 0.181);
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report nav .nav_option.current {
+  border-color: #FAFBFC;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .spline_chart {
+  width: 100%;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .spline_chart .highcharts-point {
+  display: none;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .spline_chart .highcharts-yaxis-grid .highcharts-grid-line {
+  border-bottom: 5px solid black;
+  stroke: #212121;
+  stroke-width: 1px;
+  stroke-dasharray: 15px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .spline_chart .highcharts-credits {
+  display: none;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .spline_chart .highcharts-axis-labels {
+  color: #D9D9D9;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.203px;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .toggle_container .period_tab {
+  display: none;
+  width: 100%;
+}
+.quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .toggle_container .period_tab.show {
+  display: flex;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column {
+  width: 100%;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence {
+  padding: 18px;
+  border-radius: 12px;
+  background: rgba(20, 27, 34, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence h4 {
+  color: rgba(217, 217, 217, 0.4);
+  opacity: 0.8;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 2em;
+  letter-spacing: -0.271px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .balence_total {
+  color: #FAFBFC;
+  font-size: 37.681px;
+  font-weight: 600;
+  line-height: 0.8em;
+  letter-spacing: -0.678px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .earning_value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .earning_value svg {
+  width: 30px;
+  height: 30px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .earning_value span {
+  color: #D9D9D9;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2.3em;
+  letter-spacing: -0.237px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100%;
+  margin-top: 15px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  height: 50px;
+  border-radius: 7.536px;
+  border: 0.942px solid #607BCC;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button svg {
+  height: 20px;
+  width: 20px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button span {
+  color: white;
+  font-size: 15.072px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button:hover {
+  background: white;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button:hover span {
+  color: black;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button:hover svg {
+  stroke: black;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button.receive {
+  border-color: #C292EB;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer .users_icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer .users_icons svg {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer .users_icons svg.user_svg * {
+  stroke: #607BCC;
+  transition: 0.15s;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer .users_icons svg.user_svg:hover * {
+  stroke: white;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer .users_icons svg.add_user {
+  width: 90%;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer .users_icons svg.add_user rect {
+  transition: 0.15s;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer .users_icons svg.add_user:hover rect {
+  opacity: 1;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top h4 {
+  position: relative;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top h4::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 10px);
+  transform: translateY(-50%);
+  height: 8px;
+  width: 8px;
+  background: #C292EB;
+  border-radius: 50%;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown {
+  position: relative;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown.open .button_trigger {
+  background: rgba(250, 251, 252, 0.05);
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_trigger .three_dots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_trigger .three_dots .sl_dot {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #3b424c;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_trigger:hover {
+  background: rgba(250, 251, 252, 0.05);
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_dropdown_content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 0 rgba(96, 123, 204, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_dropdown_content .dropdown_option {
+  padding: 3px 12px;
+  white-space: nowrap;
+  border-radius: 5px;
+  color: rgba(250, 251, 252, 0.54);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+  font-size: 12px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_dropdown_content .dropdown_option:hover {
+  background: rgba(250, 251, 252, 0.05);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_dropdown_content .dropdown_option.choosen_option {
+  border-color: white;
+  color: white;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown.open .button_dropdown_content {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(5px);
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #262a2f;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .user_img_container {
+  width: 50px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .user_img_container svg {
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .user_img_container svg * {
+  stroke: #607BCC;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_content {
+  width: 100%;
+  max-width: calc(100% - 130px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_content .notification_name {
+  color: #FAFBFC;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.237px;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_content .notification_action {
+  color: #D9D9D9;
+  font-size: 13px;
+  font-weight: 500;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_content .notification_click_details {
+  color: rgba(153, 237, 249, 0.54);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.203px;
+  text-decoration-line: underline;
+}
+.quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_time {
+  color: #D9D9D9;
+  text-align: right;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.203px;
+  width: 60px;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .rewards {
+    gap: 20px;
+    max-width: 100%;
+  }
+  .quanmed_dashboard_app .rewards .two_columns {
+    gap: 15px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column {
+    width: calc(50% - 7.5px);
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel {
+    padding: 5px 15px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel::before {
+    height: 25px;
+    top: 15px;
+    width: 7px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .reward_heading {
+    font-size: 8px;
+    opacity: 0.6;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 5px;
+    border-radius: 3px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_trigger .three_dots {
+    gap: 2px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_top .button_dropdown .button_trigger .three_dots .sl_dot {
+    height: 3px;
+    width: 3px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content .reward_analyse {
+    margin: 4px 0;
+    font-size: 15px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content .rewards_bottom {
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content .rewards_bottom svg {
+    width: 15px;
+    height: 15px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .rewards_amounts .reward_analyse_panel .reward_content .rewards_bottom span {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report {
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-top: 15px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top h2 {
+    font-size: 18px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top .toggle_bar {
+    border-radius: 10px;
+    padding: 3px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .wr_top .toggle_bar .toggle_option {
+    border-radius: 30px;
+    border: 1px solid transparent;
+    padding: 5px 5px;
+    font-size: 8px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report nav {
+    margin-top: 10px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report nav .nav_option {
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .spline_chart .highcharts-container {
+    height: 153px !important;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .spline_chart .highcharts-yaxis-grid .highcharts-grid-line {
+    stroke-dasharray: 5px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .left_column .wallet_report .charts_container .spline_chart .highcharts-axis-labels {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column {
+    width: calc(50% - 7.5px);
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence {
+    padding: 10px 8px;
+    border-radius: 12px;
+    gap: 8px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence h4 {
+    font-size: 10px;
+    line-height: 1em;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .balence_total {
+    color: #FAFBFC;
+    font-size: 20px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .earning_value {
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .earning_value svg {
+    width: 20px;
+    height: 20px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .earning_value span {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive {
+    gap: 5px;
+    margin-top: 0;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button {
+    gap: 2px;
+    width: 100%;
+    height: 30px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button svg {
+    height: 15px;
+    width: 15px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .send_receive .transfer_button span {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer {
+    margin-top: 10px;
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .quick_transfer .users_icons {
+    gap: 3px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con {
+    margin-top: 0;
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top h4 {
+    position: relative;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top h4::after {
+    left: calc(100% + 10px);
+    height: 5px;
+    width: 5px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_top .button_dropdown .button_trigger svg {
+    width: 15px;
+    height: 15px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper {
+    gap: 5px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification {
+    gap: 5px;
+    padding-bottom: 10px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .user_img_container {
+    width: 20px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_content {
+    width: 100%;
+    max-width: calc(100% - 50px);
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_content .notification_name {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_content .notification_action {
+    font-size: 8px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_content .notification_click_details {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .rewards .two_columns .right_column .total_balence .notifications_con .notifications_wrapper .sl_notification .notification_time {
+    font-size: 6px;
+    width: 40px;
+    margin-top: 5px;
+  }
+}
+.quanmed_dashboard_app .medical_record .upload_download_block {
+  display: flex;
+  gap: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.quanmed_dashboard_app .medical_record .upload_download_block p {
+  width: 50%;
+  color: #FAFBFC;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+}
+.quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+.quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons .sl_button {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #607BCC;
+  font-size: 18px;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: 200px;
+}
+.quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons .sl_button:hover {
+  background: white;
+  color: black;
+}
+.quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons .sl_button:hover svg * {
+  fill: black;
+}
+.quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons .sl_button svg {
+  height: 25px;
+  width: 25px;
+}
+.quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons .sl_button.download {
+  border: 1px solid #C292EB;
+}
+.quanmed_dashboard_app .medical_record .data_table {
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: rgba(20, 27, 34, 0.7);
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_name {
+  color: #FAFBFC;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_date,
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_type {
+  color: #607BCC;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  app-select: none;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort {
+  display: flex;
+  justify-content: flex-end;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown {
+  position: relative;
+  app-select: none;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown .button_trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(250, 251, 252, 0.54);
+  color: rgba(250, 251, 252, 0.54);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown .button_trigger:hover {
+  background: rgba(250, 251, 252, 0.05);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown .button_dropdown_content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 0 rgba(96, 123, 204, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown .button_dropdown_content .dropdown_option {
+  padding: 3px 12px;
+  white-space: nowrap;
+  border-radius: 5px;
+  color: rgba(250, 251, 252, 0.54);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+  font-size: 12px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown .button_dropdown_content .dropdown_option:hover {
+  background: rgba(250, 251, 252, 0.05);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown .button_dropdown_content .dropdown_option.choosen_option {
+  border-color: white;
+  color: white;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown.open .button_dropdown_content {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(10px);
+}
+.quanmed_dashboard_app .medical_record .data_table .half_table {
+  width: 100%;
+  display: flex;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_name .copy_clypboard {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #3a4b79;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_name .copy_clypboard.completed {
+  background: #6f588a;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_name .copy_clypboard.completed::after {
+  border-color: #6f588a;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_name .copy_clypboard::after {
+  content: "";
+  height: 110%;
+  width: 110%;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #3a4b79;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_name .copy_clypboard svg {
+  height: 60%;
+  width: 60%;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_name span {
+  color: #FAFBFC;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #607BCC;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #607BCC;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_sort {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_sort .sort_btn {
+  margin-left: auto;
+  padding: 8px 10px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+  border: 1px solid #607BCC;
+  color: #607BCC;
+  font-size: 14px;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_content .content_sort .sort_btn.completed {
+  border: 1px solid #99EDF9;
+  color: #99EDF9;
+}
+.quanmed_dashboard_app .medical_record .data_table .table_row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(247, 248, 250, 0.07);
+  padding-bottom: 15px;
+}
+.quanmed_dashboard_app .medical_record .data_table .col_1 {
+  width: 100%;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel {
+  border-radius: 10px;
+  background: rgba(20, 27, 34, 0.7);
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel h2 {
+  color: #FAFBFC;
+  font-size: 25px;
+  font-weight: 700;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #1e2327;
+  padding-bottom: 20px;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_left {
+  display: flex;
+  align-items: center;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_left svg {
+  height: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_left span {
+  color: white;
+  font-size: 16px;
+  padding-left: 8px;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_right {
+  margin-left: auto;
+  padding: 9px 7px;
+  border-radius: 6px;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_right.connected, .quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_right.check {
+  color: #99EDF9;
+  border: 1px solid #99EDF9;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_right.check {
+  cursor: pointer;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_right.disconnected {
+  color: #607BCC;
+  border: 1px solid #607BCC;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .sl_navigation {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .sl_navigation .sl_disabled {
+  opacity: 0.5;
+}
+.quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .sl_navigation svg {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps h2 {
+  color: #FAFBFC;
+  font-size: 25px;
+  font-weight: 700;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .swiper {
+  width: 100%;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card {
+  border-radius: 12.685px;
+  background: rgba(20, 27, 34, 0.7);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .person_info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .person_info .app_icon svg {
+  height: 50px;
+  width: 50px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .person_info .name_role .name {
+  color: #FAFBFC;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5em;
+  letter-spacing: -0.32px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .person_info .name_role .role {
+  color: #D9D9D9;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.12px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .app_status {
+  color: #607BCC;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .app_description {
+  color: #D9D9D9;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8em;
+  font-family: "Inter", sans-serif;
+  margin-top: 8px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom {
+  display: flex;
+  gap: 10px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt svg {
+  width: 25px;
+  height: 25px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt span {
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: -0.28px;
+}
+.quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt:last-child {
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .medical_record .upload_download_block {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .upload_download_block p {
+    width: 100%;
+    font-size: 14px;
+  }
+  .quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons {
+    width: 100%;
+  }
+  .quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons .sl_button {
+    height: 40px;
+    font-size: 13px;
+    padding: 5px;
+  }
+  .quanmed_dashboard_app .medical_record .upload_download_block .upload_download_buttons .sl_button svg {
+    height: 20px;
+    width: 20px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table {
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: rgba(20, 27, 34, 0.7);
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_head .table_name {
+    font-size: 14px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_head .table_date,
+  .quanmed_dashboard_app .medical_record .data_table .table_head .table_type {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_head .table_sort .button_dropdown .button_trigger {
+    padding: 2px 5px;
+    gap: 4px;
+    border-radius: 4px;
+    font-size: 8px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_content {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_content .content_name {
+    gap: 7px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_content .content_name .copy_clypboard {
+    height: 20px;
+    width: 20px;
+    aspect-ratio: 1/1;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_content .content_name span {
+    font-size: 7px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_content .content_date {
+    font-size: 7px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_content .content_type {
+    font-size: 7px;
+  }
+  .quanmed_dashboard_app .medical_record .data_table .table_content .content_sort .sort_btn {
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 7px;
+  }
+  .quanmed_dashboard_app .medical_record .tb_slider_panel {
+    padding: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .tb_slider_panel h2 {
+    font-size: 20px;
+  }
+  .quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row {
+    padding-bottom: 10px;
+    align-items: center;
+  }
+  .quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_left svg {
+    height: 15px;
+    max-width: 80%;
+    padding-right: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_left span {
+    font-size: 10px;
+    padding-left: 0;
+  }
+  .quanmed_dashboard_app .medical_record .tb_slider_panel .table_slider .slide_content .slide_row .row_right {
+    margin-left: auto;
+    padding: 3px 5px;
+    border-radius: 2px;
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps h2 {
+    font-size: 18px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .swiper {
+    width: 100%;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card {
+    padding: 14px;
+    gap: 14px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .person_info {
+    gap: 12px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .person_info .app_icon svg {
+    height: 30px;
+    width: 30px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .person_info .name_role .name {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .person_info .name_role .role {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_top .app_status {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .app_description {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom {
+    display: flex;
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt svg {
+    width: 15px;
+    height: 15px;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt span {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt .star-container {
+    padding: 0 !important;
+    padding-right: 5px !important;
+  }
+  .quanmed_dashboard_app .medical_record .community_dapps .app_card .card_bottom .icon_txt .star-container svg {
+    width: 15px !important;
+    height: 15px !important;
+  }
+}
+.quanmed_dashboard_app .neutron_interface .chat_interface {
+  border-radius: 20px;
+  background: rgba(20, 27, 34, 0.7);
+  padding: 20px 5%;
+  margin-top: 10px;
+}
+.quanmed_dashboard_app .neutron_interface .chat_interface .chat_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .neutron_interface .chat_interface .chat_container span {
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 500;
+}
+.quanmed_dashboard_app .neutron_interface .chat_interface .prompt_container {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid #FAFBFC;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.quanmed_dashboard_app .neutron_interface .chat_interface .prompt_container input {
+  width: calc(100% - 50px - 20px);
+  color: white;
+  outline: none;
+  background-color: transparent;
+  border: 0;
+  height: 30px;
+}
+.quanmed_dashboard_app .neutron_interface .chat_interface .prompt_container svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+.quanmed_dashboard_app .neutron_interface .chat_interface .prompt_container svg:hover {
+  background: rgba(69, 77, 85, 0.7);
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .neutron_interface .chat_interface .chat_container {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .quanmed_dashboard_app .neutron_interface .chat_interface .chat_container span {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .quanmed_dashboard_app .neutron_interface .chat_interface .prompt_container {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #FAFBFC;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .neutron_interface .chat_interface .prompt_container input {
+    width: calc(100% - 50px - 20px);
+    color: white;
+    outline: none;
+    background-color: transparent;
+    border: 0;
+    height: 30px;
+  }
+  .quanmed_dashboard_app .neutron_interface .chat_interface .prompt_container svg {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+  }
+  .quanmed_dashboard_app .neutron_interface .chat_interface .prompt_container svg:hover {
+    background: rgba(69, 77, 85, 0.7);
+  }
+}
+.quanmed_dashboard_app .typing {
+  position: relative;
+}
+.quanmed_dashboard_app .typing span {
+  content: "";
+  animation: blink 1.5s infinite;
+  animation-fill-mode: both;
+  height: 10px;
+  width: 10px;
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+}
+.quanmed_dashboard_app .typing span:nth-child(2) {
+  animation-delay: 0.2s;
+  margin-left: 15px;
+}
+.quanmed_dashboard_app .typing span:nth-child(3) {
+  animation-delay: 0.4s;
+  margin-left: 30px;
+}
+@keyframes blink {
+  0% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics {
+  display: flex;
+  align-items: stretch;
+  min-height: 200px;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .left_options {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: inherit;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .left_options span {
+  color: white;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side {
+  width: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .core_image {
+  width: 30%;
+  margin: 0 auto;
+  opacity: 0.5;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom:nth-child(1) img {
+  animation: bounce 0.7s infinite;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom:nth-child(2) img {
+  animation: bounce 2.7s infinite;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom:nth-child(3) img {
+  animation: bounce 1.1s infinite;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom:nth-child(4) img {
+  animation: bounce 1.6s infinite;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom:nth-child(5) img {
+  animation: bounce 5s infinite;
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom img {
+  width: 50%;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+.quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom span {
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .quark_reflection .core_analytics .left_options {
+    width: 100px;
+  }
+  .quanmed_dashboard_app .quark_reflection .core_analytics .left_options span {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .quark_reflection .core_analytics .right_side {
+    width: calc(100% - 100px);
+  }
+  .quanmed_dashboard_app .quark_reflection .core_analytics .right_side .core_image {
+    width: 40%;
+    margin: 0 auto;
+    opacity: 0.5;
+  }
+  .quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom img {
+    width: 100%;
+  }
+  .quanmed_dashboard_app .quark_reflection .core_analytics .right_side .bottom_atoms .single_atom span {
+    font-size: 12px;
+  }
+}
+.quanmed_dashboard_app .routes_container {
+  width: 100%;
+  padding: 12px 30px;
+  padding-bottom: 100px;
+}
+@media (min-width: 767px) {
+  .quanmed_dashboard_app .routes_container {
+    max-width: calc(100% - 300px);
+  }
+}
+@media (max-width: 767px) {
+  .quanmed_dashboard_app .routes_container {
+    padding: 12px;
+  }
+}
+.quanmed_dashboard_app .animatedTitle {
+  color: white;
+  margin-top: 12px;
+}
+.quanmed_dashboard_app .animatedTitle h1 {
+  font-size: 33px;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .animatedTitle h1 {
+    font-size: 20px;
+  }
+}
+.quanmed_dashboard_app .page_description {
+  color: #FAFBFC;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 20px 0;
+  max-width: 869px;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .page_description {
+    font-size: 13px;
+  }
+}
+.quanmed_dashboard_app .main_dashboard .animatedTitle .char {
+  background: linear-gradient(105deg, #C292EB -10.78%, #607BCC 47.43%, #99EDF9 146.27%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.quanmed_dashboard_app .page_paragraph {
+  font-size: 21px;
+  font-weight: 500;
+  color: #FAFBFC;
+  margin-top: 50px;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .page_paragraph {
+    margin-top: 10px;
+    font-size: 14px;
+  }
+}
+.quanmed_dashboard_app .panels_container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.quanmed_dashboard_app .panels_container .panel {
+  padding: 20px 30px 30px 30px;
+  border-radius: 10px;
+  background: rgba(20, 27, 34, 0.7);
+  display: flex;
+  flex-direction: column;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+  justify-content: space-between;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .left_side .panel_heading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #EDEDED;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  gap: 6px;
+  border-radius: 10px;
+  border: 1px solid rgba(250, 251, 252, 0.54);
+  color: rgba(250, 251, 252, 0.54);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_trigger .three_dots {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_trigger .three_dots .sl_dot {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #3b424c;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_trigger:hover {
+  background: rgba(250, 251, 252, 0.05);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_dropdown_content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: 0.5s;
+  box-shadow: 0 0 5px 0 rgba(96, 123, 204, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0);
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_dropdown_content .dropdown_option {
+  padding: 3px 12px;
+  white-space: nowrap;
+  border-radius: 5px;
+  color: rgba(250, 251, 252, 0.54);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+  font-size: 12px;
+  transition: 0.15s;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_dropdown_content .dropdown_option:hover {
+  background: rgba(250, 251, 252, 0.05);
+  border: 1px solid rgba(250, 251, 252, 0.7);
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_dropdown_content .dropdown_option.choosen_option {
+  border-color: white;
+  color: white;
+}
+.quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown.open .button_dropdown_content {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(10px);
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .panels_container .panel {
+    padding: 12px 10px;
+  }
+  .quanmed_dashboard_app .panels_container .panel .panel_top .left_side .panel_heading {
+    font-size: 13px;
+    font-weight: 400;
+  }
+  .quanmed_dashboard_app .panels_container .panel .panel_top .right_side .button_dropdown .button_trigger {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+.quanmed_dashboard_app .sl_table {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.quanmed_dashboard_app .sl_table .col_1 {
+  width: 100%;
+}
+.quanmed_dashboard_app .sl_table .col_2 {
+  width: 200%;
+}
+.quanmed_dashboard_app .sl_table .col_3 {
+  width: 300%;
+}
+.quanmed_dashboard_app .sl_table .col_4 {
+  width: 400%;
+}
+.quanmed_dashboard_app .sl_table .col_5 {
+  width: 500%;
+}
+.quanmed_dashboard_app .sl_table .table_head {
+  display: flex;
+}
+.quanmed_dashboard_app .sl_table .table_head .col_1 {
+  color: #475D96;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.quanmed_dashboard_app .sl_table .table_head .col_1:not(:nth-child(1)) {
+  text-align: center;
+}
+.quanmed_dashboard_app .sl_table .table_body {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .sl_table {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .sl_table .table_head .col_1 {
+    font-size: 7.5px;
+  }
+  .quanmed_dashboard_app .sl_table .table_body {
+    gap: 10px;
+  }
+}
+.quanmed_dashboard_app .popup_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quanmed_dashboard_app .popup_overlay .popup {
+  background: black;
+  border-radius: 15px;
+  width: 456px;
+  max-width: calc(100% - 20px);
+  border: 1px solid #242424;
+  padding: 40px 0;
+  animation: fadeUp 0.5s;
+}
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup {
+  border: 2px solid #607BCC;
+  border-radius: 20px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup .popup_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup .popup_content h3 {
+  color: #FAFBFC;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 45px;
+  max-width: 300px;
+  font-weight: 400;
+  line-height: 1em; /* 98.385% */
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button {
+  padding: 15px;
+  border-radius: 50px;
+  color: #FAFBFC;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button:hover {
+  background: white !important;
+  border-color: white !important;
+  color: black !important;
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button.sign_up {
+  width: calc(50% - 7.5px);
+  border: 1px solid #607BCC;
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button.sign_in {
+  width: calc(50% - 7.5px);
+  background: #607BCC;
+  border: 1px solid #607BCC;
+}
+.quanmed_dashboard_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button.continue_wallet {
+  width: 100%;
+  background: #605F76;
+  border: 1px solid #605F76;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content {
+  padding: 0 50px;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content * {
+  font-family: "Poppins", sans-serif;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading {
+  display: flex;
+  justify-content: space-between;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .left_side {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .left_side h2 {
+  all: unset;
+  color: #FAFBFC !important;
+  font-size: 30px;
+  font-weight: 400;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .left_side p {
+  color: #AAA7B2;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2em;
+  letter-spacing: 0.1px;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .right_side {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .right_side span {
+  color: #607BCC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.28emm;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  display: block;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container {
+  border: 1px solid #605F76;
+  height: 48px;
+  border-radius: 40px;
+  position: relative;
+  padding: 6px 20px;
+  transition: 0.15s;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container .error_message {
+  display: none;
+  position: absolute;
+  color: #EF3F26;
+  top: calc(100% + 10px);
+  left: 0;
+  font-size: 10px;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container.field_error {
+  border-color: #EF3F26;
+  margin-bottom: 25px;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container.field_error label {
+  color: #EF3F26;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container.field_error .error_message {
+  display: block;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container label {
+  position: absolute;
+  left: 20px; /* Hey Dev: You can change this to fit the field container padding */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #AAA7B2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  transition: 0.15s;
+  pointer-events: none;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  color: white;
+  border: 0;
+  padding-top: 10px;
+  color: #AAA7B2;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container input:focus + label,
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container input.not_empty + label {
+  transform: unset;
+  top: 5px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .acceptance {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .acceptance input[type=checkbox] {
+  accent-color: #607BCC;
+  height: 20px;
+  width: 20px;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .acceptance label {
+  color: #AAA7B2;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container button.submit_form {
+  height: 48px;
+  border-radius: 60px;
+  background: #607BCC;
+  border: 0;
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3em;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container button.wallet_continue {
+  height: 48px;
+  border-radius: 60px;
+  background: #605f76;
+  border: 0;
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3em;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .forgot_password {
+  color: #607BCC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.28em;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .divider {
+  position: relative;
+  border-bottom: 1px solid #605F76;
+  margin: 25px 0;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .divider span {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background: black;
+  color: #AAA7B2;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 10px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login {
+  border: 1px solid #605F76;
+  padding: 6px 12px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login svg {
+  height: 30px;
+  width: 30px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login svg path {
+  transition: 0.2s;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login.facebook svg path {
+  stroke: #607BCC;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login.facebook:hover {
+  background: #607BCC;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login.facebook:hover svg path {
+  stroke: white;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login.facebook:hover span {
+  color: white;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login.twitter svg path {
+  stroke: #fff;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login.twitter:hover {
+  background: #fff;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login.twitter:hover svg path {
+  stroke: black;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login.twitter:hover span {
+  color: black;
+}
+.quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login span {
+  color: #AAA7B2;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5em;
+  transition: 0.2s;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content svg {
+  width: 52px;
+  height: 52px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content h2 {
+  color: #FAFBFC;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1em;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content p {
+  color: #AAA7B2;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2em;
+  letter-spacing: 0.1px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .buttons_con {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .buttons_con .single_btn {
+  width: 50%;
+  height: 48px;
+  border: 1px solid #607BCC;
+  border-radius: 50px;
+  color: #FAFBFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4em;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .buttons_con .single_btn:nth-child(2), .quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .buttons_con .single_btn:hover {
+  color: white;
+  background: #607BCC;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .subscribe_form {
+  height: 48px;
+  position: relative;
+  width: 100%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .subscribe_form input {
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  background: transparent;
+  border: 1px solid #607BCC;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  outline: none;
+  color: white;
+}
+.quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .subscribe_form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  cursor: pointer;
+  background: #607BCC;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+}
+.quanmed_dashboard_app .popup_overlay .popup.small_title .popup_content h2 {
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .popup_overlay {
+    padding: 20px 0;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup {
+    padding: 20px 0;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content {
+    padding: 0 15px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .left_side h2 {
+    font-size: 20px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .left_side p {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .right_side {
+    padding-top: 10px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .top_heading .right_side span {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container {
+    margin-top: 10px;
+    gap: 8px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container {
+    height: 40px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container .error_message {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container label {
+    font-size: 13px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container input {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container input:focus + label,
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .field_container input.not_empty + label {
+    font-size: 9px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .acceptance input[type=checkbox] {
+    height: 12px;
+    width: 12px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container .acceptance label {
+    font-size: 10px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup .popup_content .form_container button.submit_form {
+    height: 35px;
+    font-size: 13px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.sign_in .forgot_password {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.sign_in .divider span {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.sign_in .login_options .option_login span {
+    font-size: 12px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content {
+    gap: 12px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content svg {
+    width: 40px;
+    height: 40px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content h2 {
+    font-size: 25px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content p {
+    font-size: 12px;
+    line-height: 1.3em;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .buttons_con {
+    gap: 10px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .buttons_con .single_btn {
+    height: 40px;
+    font-size: 12px;
+    line-height: 1.4em;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.modern_alert .popup_content .subscribe_form {
+    height: 40px;
+  }
+  .quanmed_dashboard_app .popup_overlay .popup.small_title .popup_content h2 {
+    font-size: 20px;
+  }
+}
+.quanmed_dashboard_app .message_popup {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 300px;
+  max-width: 90%;
+  z-index: 10000;
+  background: black;
+  border: 2px solid #607BCC;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.quanmed_dashboard_app .message_popup.success_popup svg path {
+  fill: #607BCC;
+}
+.quanmed_dashboard_app .message_popup.error_message svg path {
+  fill: #C292EB;
+}
+.quanmed_dashboard_app .message_popup svg {
+  width: 39px;
+  margin-bottom: -10px;
+}
+.quanmed_dashboard_app .message_popup h3 {
+  color: #FAFBFC;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1em;
+}
+.quanmed_dashboard_app .message_popup p {
+  color: #AAA7B2;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25em;
+  letter-spacing: 0.095px;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .message_popup {
+    top: 60px;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  .quanmed_dashboard_app .message_popup svg {
+    width: 30px;
+    margin-bottom: -15px;
+  }
+  .quanmed_dashboard_app .message_popup h3 {
+    font-size: 20px;
+  }
+  .quanmed_dashboard_app .message_popup p {
+    color: #AAA7B2;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25em;
+    letter-spacing: 0.095px;
+  }
+}
+.quanmed_dashboard_app .live_test h2 {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.quanmed_dashboard_app .live_test .buttons_popups {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+.quanmed_dashboard_app .live_test .buttons_popups .open_popup {
+  border: 1px solid #607BCC;
+  background: transparent;
+  color: white;
+  transition: 0.3s;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.quanmed_dashboard_app .live_test .buttons_popups .open_popup:hover {
+  background: #607BCC;
+}
+@media (max-width: 768px) {
+  .quanmed_dashboard_app .live_test h2 {
+    font-size: 30px;
+  }
+  .quanmed_dashboard_app .live_test .buttons_popups {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#root {
+  width: 100%;
+  max-height: 100vh;
+}
+
+@media (max-width: 768px) {
+  body #root.no_scroll {
+    overflow: hidden;
+  }
+}
+.main_app {
+  /*--------------------------------|
+  |            Breakpoints          |
+  |--------------------------------*/
+  /*--------------------------------|
+  |              Mixins             |
+  |--------------------------------*/
+  /*--------------------------------|
+  |            Site Header          |
+  |--------------------------------*/
+  /*--------------------------------|
+  |         Section Content         |
+  |--------------------------------*/
+  /*--------------------------------|
+  |         Section Content         |
+  |--------------------------------*/
+  /*--------------------------------|
+  |             Footer              |
+  |--------------------------------*/
+  /*=====================================|
+  |               Popups                 |
+  |=====================================*/
+  /*==========================================|
+  |              Messages Popups              |
+  |==========================================*/
+  height: 100vh;
+}
+.main_app * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Kufi Arabic", sans-serif;
+  text-decoration: none;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.main_app * *.hide {
+  display: none !important;
+}
+.main_app ::-webkit-scrollbar {
+  display: none;
+}
+.main_app .dark {
+  background: black;
+  padding-bottom: 125px;
+}
+.main_app .dark * {
+  color: white;
+  font-weight: 400;
+}
+.main_app .dark + header * {
+  color: white;
+}
+.main_app .light {
+  background: white;
+  padding-bottom: 125px;
+}
+.main_app .light ~ header .main_menu {
+  background: white;
+}
+.main_app .light ~ header .left_side nav .dropdown_container .dropdown_links a {
+  color: black !important;
+}
+.main_app .light ~ header img {
+  filter: brightness(0);
+}
+.main_app .light ~ header svg line {
+  stroke: black;
+}
+.main_app .light ~ header * {
+  color: black !important;
+  font-weight: 400;
+}
+.main_app .light ~ header a {
+  color: black !important;
+}
+.main_app .light ~ footer * {
+  color: black !important;
+}
+.main_app .light * {
+  color: black !important;
+  font-weight: 400;
+}
+.main_app .light a {
+  color: black !important;
+}
+.main_app .light .scrollNav {
+  filter: brightness(0);
+}
+.main_app .light .cta {
+  background: white !important;
+  border: 1px solid black !important;
+}
+.main_app .light .cta svg path {
+  fill: #000;
+}
+.main_app .light .cta:hover {
+  background: black !important;
+  color: white !important;
+}
+.main_app .light .cta:hover svg path {
+  fill: #fff !important;
+}
+.main_app .light .scroll_down path {
+  stroke: #000;
+}
+@media (max-width: 568px) {
+  .main_app .hide_mobile {
+    display: none !important;
+  }
+}
+.main_app .main_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.main_app .main_nav.open_menu * {
+  color: white;
+}
+.main_app .main_nav.open_menu .main_menu {
+  opacity: 1;
+  pointer-events: all;
+}
+.main_app .main_nav.open_menu .main_menu .list_menu {
+  transform: translateY(0);
+}
+.main_app .main_nav.open_menu .menu svg line:nth-child(1) {
+  transform: rotate(40deg);
+}
+.main_app .main_nav.open_menu .menu svg line:nth-child(2) {
+  opacity: 0;
+}
+.main_app .main_nav.open_menu .menu svg line:nth-child(3) {
+  transform: rotate(-42deg) translateX(-11px) translateY(-4px);
+}
+.main_app .main_nav .left_side {
+  display: flex;
+  gap: 58px;
+  align-items: center;
+  z-index: 5;
+}
+.main_app .main_nav .left_side img {
+  height: 48px;
+  transform: translateY(5px);
+}
+.main_app .main_nav .left_side nav {
+  display: flex;
+  gap: 45px;
+}
+.main_app .main_nav .left_side nav .dropdown_container {
+  position: relative;
+}
+.main_app .main_nav .left_side nav .dropdown_container:hover .dropdown_links {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.main_app .main_nav .left_side nav .dropdown_container .dropdown_links {
+  position: absolute;
+  top: calc(100% + 4px);
+  padding: 0;
+  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.7s;
+}
+.main_app .main_nav .left_side nav .dropdown_container .dropdown_links a {
+  color: white;
+  opacity: 0.5;
+  white-space: nowrap;
+  font-size: 15px;
+}
+.main_app .main_nav .left_side nav .dropdown_container .dropdown_links a:hover {
+  opacity: 1;
+}
+.main_app .main_nav .left_side nav .dropdown_container .dropdown_links a::after {
+  content: unset;
+}
+.main_app .main_nav .left_side nav a {
+  color: white;
+  font-size: 16px;
+  position: relative;
+}
+.main_app .main_nav .left_side nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: calc(100% + 1px);
+  height: 3px;
+  background: white;
+  width: 0;
+  transition: 0.3s;
+  transform-origin: left;
+}
+.main_app .main_nav .left_side nav a:hover::after {
+  width: 100%;
+}
+.main_app .main_nav .menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  z-index: 5;
+}
+.main_app .main_nav .menu img {
+  width: 35px;
+}
+.main_app .main_nav .menu svg line {
+  transition: 0.3s;
+}
+.main_app .main_nav .menu span {
+  transition: 0.3s;
+}
+.main_app .main_nav .menu:hover svg line {
+  stroke: #99EDF9;
+}
+.main_app .main_nav .main_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.98);
+  height: 100vh;
+  z-index: 4;
+  opacity: 0;
+  transition: 0.6s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+.main_app .main_nav .main_menu .list_menu {
+  transition: 0.7s;
+  gap: 35px;
+  transform: translateY(10px);
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_app .main_nav .main_menu .list_menu:hover a {
+  opacity: 0.4;
+}
+.main_app .main_nav .main_menu .list_menu a {
+  color: #FFF;
+  font-family: Poppins;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.3s;
+}
+.main_app .main_nav .main_menu .list_menu a:hover {
+  opacity: 1;
+}
+@media (max-width: 568px) {
+  .main_app header .left_side img {
+    height: 27px;
+  }
+  .main_app header .menu img {
+    opacity: 0.5;
+    height: 15px;
+  }
+  .main_app header .menu span {
+    font-size: 14px;
+  }
+  .main_app header .main_menu .list_menu {
+    gap: 20px;
+    flex-direction: column;
+  }
+  .main_app header .main_menu .list_menu a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 990px) {
+  .main_app header {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+  }
+  .main_app header .main_menu .list_menu {
+    gap: 43px;
+  }
+  .main_app header .main_menu .list_menu a {
+    font-size: 20px;
+  }
+  .main_app header .left_side nav {
+    display: none;
+  }
+}
+@media (min-width: 990px) {
+  .main_app header {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .main_app header .left_side nav a {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  .main_app header {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-top: 10px;
+  }
+}
+@media (min-width: 2560px) {
+  .main_app header {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 10px;
+  }
+}
+.main_app .page_content {
+  position: relative;
+  z-index: 1;
+}
+.main_app .smaller_content .swiper .swiper-slide {
+  transition-duration: 0 !important;
+}
+.main_app .smaller_content .swiper .swiper-slide .section_content .section_inner h2 {
+  font-size: 45px;
+}
+.main_app .smaller_content .swiper .swiper-slide .section_content .section_inner .paragraph {
+  font-size: 18px;
+}
+.main_app .smaller_content .swiper .swiper-slide .section_content .section_inner .paragraph strong {
+  font-weight: 800;
+}
+@media (max-width: 990px) {
+  .main_app .smaller_content .swiper .swiper-slide .section_content .section_inner h2 {
+    font-size: 35px;
+  }
+  .main_app .smaller_content .swiper .swiper-slide .section_content .section_inner .paragraph {
+    font-size: 12px;
+  }
+  .main_app .smaller_content .swiper .swiper-slide .section_content .section_inner .paragraph strong {
+    font-weight: 800;
+  }
+  .main_app .smaller_content .swiper .swiper-slide .section_content .section_inner .section_img {
+    max-width: 100%;
+  }
+}
+.main_app .animating_bg {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.main_app .animating_bg .left_dna {
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 60%;
+  max-height: 80%;
+}
+.main_app .animating_bg .left_dna svg {
+  position: absolute;
+  max-height: 120%;
+  max-width: 120%;
+  left: 0;
+  top: 0;
+  overflow: visible;
+}
+.main_app .animating_bg .right_dna {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 30%;
+  max-height: 40%;
+}
+.main_app .animating_bg .right_dna svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 120%;
+  max-width: 120%;
+  overflow: visible;
+}
+.main_app h2 {
+  font-weight: 400;
+  font-size: 86px;
+  line-height: 1.3;
+  text-align: center;
+  max-width: 1166px;
+  opacity: 0;
+  z-index: 4;
+}
+.main_app h2.show_title {
+  opacity: 1;
+}
+.main_app h2 .line {
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow-y: hidden;
+}
+.main_app h2 .char {
+  transform: translateY(3px);
+  opacity: 0;
+  transition: 0.3s;
+  display: inline-block !important;
+}
+.main_app .cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 4s;
+  gap: 5px;
+  border: 1px solid white;
+  border-radius: 300px;
+  padding: 14px 30px;
+  font-size: 20px;
+  z-index: 4;
+  transition: 0.5s;
+  background: rgba(0, 0, 0, 0);
+}
+.main_app .cta svg {
+  width: 13px;
+  transition: 0.5s;
+}
+.main_app .cta svg path {
+  transition: 0.5s;
+}
+.main_app .cta:hover {
+  background: white;
+  color: #000;
+}
+.main_app .cta:hover svg {
+  margin-left: 10px;
+}
+.main_app .cta:hover svg path {
+  fill: #000;
+}
+.main_app .swiper {
+  height: 100vh;
+  overflow-y: hidden;
+}
+.main_app .swiper .swiper-slide {
+  height: 100vh !important;
+  max-height: 100vh;
+  width: 100% !important;
+  overflow: hidden !important;
+}
+.main_app .swiper .swiper-slide .section_content {
+  height: 100vh;
+  width: 100%;
+  pointer-events: none;
+  z-index: -10;
+  position: relative;
+}
+.main_app .swiper .swiper-slide .section_content .section_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  z-index: 10;
+  display: none;
+}
+.main_app .swiper .swiper-slide .section_content .section_inner.animating_bg {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.main_app .swiper .swiper-slide .section_content .section_inner.animating_bg .left_dna {
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 60%;
+  max-height: 80%;
+}
+.main_app .swiper .swiper-slide .section_content .section_inner.animating_bg .left_dna svg {
+  position: absolute;
+  max-height: 120%;
+  max-width: 120%;
+  left: 0;
+  top: 0;
+  overflow: visible;
+}
+.main_app .swiper .swiper-slide .section_content .section_inner.animating_bg .right_dna {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 30%;
+  max-height: 40%;
+}
+.main_app .swiper .swiper-slide .section_content .section_inner.animating_bg .right_dna svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-height: 120%;
+  max-width: 120%;
+  overflow: visible;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.main_app .swiper .swiper-slide .section_content .paragraph {
+  z-index: 4;
+  animation: fadeIn 4s;
+  font-size: 25px;
+  max-width: 980px;
+  text-align: center;
+  padding: 0 20px;
+  gap: 30px;
+}
+.main_app .swiper .swiper-slide .section_content .paragraph .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main_app .swiper .swiper-slide .section_content .paragraph .col {
+  width: 100%;
+}
+.main_app .swiper .swiper-slide .section_content .paragraph img {
+  max-width: 300px;
+}
+.main_app .swiper .swiper-slide .section_content .section_img {
+  width: 500px;
+  max-width: 50%;
+}
+.main_app .swiper .swiper-slide .section_content video {
+  position: fixed;
+  pointer-events: none !important;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+  transition: 0.7s;
+  opacity: 0;
+}
+.main_app .swiper .swiper-slide.swiper-slide-active .section_content {
+  pointer-events: all;
+  z-index: 2;
+}
+.main_app .swiper .swiper-slide.swiper-slide-active .section_content .section_inner {
+  display: flex;
+}
+.main_app .swiper .swiper-slide.swiper-slide-active .section_content video {
+  opacity: 0.7;
+}
+.main_app .swiper .swiper-slide .scroll_down {
+  display: none;
+}
+.main_app .swiper .swiper-slide.swiper-slide-active .scroll_down {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -20px);
+  cursor: pointer;
+  z-index: 11;
+}
+.main_app .swiper .swiper-slide.swiper-slide-active .scroll_down.true {
+  display: none;
+}
+@media (max-width: 990px) {
+  .main_app .homepage h2 .char.letter_i {
+    margin: 0 !important;
+  }
+  .main_app h2 {
+    font-size: 32px;
+  }
+  .main_app h2 .char.letter_t {
+    margin-left: 7px;
+    margin-right: -2px;
+  }
+  .main_app h2 .char.letter_i {
+    margin-left: 5px;
+    margin-right: -5px;
+  }
+  .main_app .swiper .swiper-slide .scroll_down {
+    transform: translate(-50%, -10px) !important;
+  }
+  .main_app .swiper .swiper-slide .section_content .paragraph {
+    font-size: 16px;
+    flex-direction: column;
+  }
+  .main_app .animating_bg .left_dna svg {
+    max-height: 150%;
+    max-width: 150%;
+  }
+  .main_app .animating_bg .right_dna {
+    right: unset;
+    left: 55vw;
+  }
+  .main_app .animating_bg .right_dna svg {
+    max-height: 80%;
+    max-width: 220%;
+  }
+}
+@media (min-width: 990px) {
+  .main_app h2 {
+    font-size: 52px;
+  }
+  .main_app .swiper .swiper-slide .section_content {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .main_app .swiper .swiper-slide .section_content .paragraph {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .main_app h2 {
+    font-size: 40px;
+  }
+  .main_app .swiper .swiper-slide .section_content .paragraph {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1920px) {
+  .main_app h2 {
+    font-size: 48px;
+  }
+  .main_app .swiper .swiper-slide .section_content {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  .main_app .swiper .swiper-slide .section_content .paragraph {
+    font-size: 24px;
+  }
+}
+@media (min-width: 2560px) {
+  .main_app h2 {
+    font-size: 184px;
+  }
+  .main_app .cta {
+    font-size: 100px;
+    padding: 20px 100px;
+    gap: 30px;
+  }
+  .main_app .cta svg {
+    width: 80px;
+    height: 80px;
+  }
+  .main_app .swiper .swiper-slide .section_content {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .main_app .swiper .swiper-slide .section_content .paragraph {
+    font-size: 82px;
+    max-width: 80%;
+  }
+}
+.main_app .scrollNav {
+  position: fixed;
+  left: 160px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  z-index: 10;
+}
+.main_app .scrollNav .scroll_icon {
+  min-height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  align-self: stretch;
+}
+.main_app .scrollNav .links {
+  display: flex;
+  flex-direction: column;
+  gap: -2px;
+}
+.main_app .scrollNav .links a {
+  font-size: 14px;
+  transition: 0.3s;
+  color: white;
+  opacity: 0.6;
+}
+.main_app .scrollNav .links a.active {
+  opacity: 1;
+  font-weight: 600;
+}
+.main_app .scrollNav .links a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 568px) {
+  .main_app .scrollNav {
+    left: 10px;
+  }
+  .main_app .scrollNav .links {
+    display: none;
+  }
+}
+@media (max-width: 1440px) {
+  .main_app .scrollNav {
+    left: 10px;
+  }
+}
+@media (min-width: 1440px) {
+  .main_app .scrollNav {
+    left: 80px;
+  }
+}
+@media (min-width: 1920px) {
+  .main_app .scrollNav {
+    left: 160px;
+  }
+}
+@media (min-width: 2560px) {
+  .main_app .scrollNav {
+    left: 200px;
+  }
+}
+.main_app footer {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  align-items: flex-end;
+  padding-bottom: 0px;
+  pointer-events: none;
+  z-index: 10;
+}
+.main_app footer .links_left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  pointer-events: all;
+}
+.main_app footer .links_left:hover a {
+  opacity: 0.2;
+}
+.main_app footer .links_left a {
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+.main_app footer .links_left a:hover {
+  opacity: 1;
+}
+.main_app footer .copyright {
+  pointer-events: all;
+  color: rgba(250, 251, 252, 0.5);
+  font-weight: 300;
+  font-size: 15px;
+}
+@media (max-width: 568px) {
+  .main_app footer .links_left {
+    gap: 6px;
+  }
+  .main_app footer .links_left a {
+    font-size: 10px !important;
+  }
+  .main_app footer span.copyright {
+    font-size: 10px;
+  }
+}
+@media (max-width: 1440px) {
+  .main_app footer {
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .main_app footer .links_left {
+    gap: 8px;
+  }
+  .main_app footer .links_left a {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1440px) {
+  .main_app footer {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+  }
+}
+@media (min-width: 1920px) {
+  .main_app footer {
+    padding-left: 160px;
+    padding-right: 160px;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 2560px) {
+  .main_app footer {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 40px;
+  }
+}
+.main_app .blog_page {
+  min-height: 100vh;
+  background: black;
+  display: flex;
+  padding-top: 30vh;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.main_app .blog_page h2 {
+  opacity: 1;
+}
+.main_app .blog_page .posts_container {
+  max-width: 1000px;
+  padding: 0 20px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  z-index: 4;
+}
+.main_app .blog_page .posts_container .post_data {
+  background: rgba(0, 0, 0, 0.768);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.204);
+  overflow: hidden;
+  width: 100%;
+}
+.main_app .blog_page .posts_container .post_data img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main_app .blog_page .posts_container .post_data .text_content {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.main_app .blog_page .posts_container .post_data .text_content h3 {
+  width: 100%;
+  font-size: 25px;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.537);
+}
+.main_app .blog_page .posts_container .post_data .text_content p {
+  font-size: 12px;
+  color: rgba(238, 238, 238, 0.537);
+  line-height: 1.4;
+}
+.main_app .blog_page .posts_container .post_data .text_content .cta.smaller_cta {
+  font-size: 18px;
+  padding: 7px 20px;
+  animation: unset !important;
+}
+@media (max-width: 768px) {
+  .main_app .blog_page .posts_container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.main_app .popup_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main_app .popup_overlay .popup {
+  background: black;
+  border-radius: 15px;
+  width: 456px;
+  max-width: calc(100% - 20px);
+  border: 1px solid #242424;
+  padding: 40px 0;
+  animation: fadeUp 0.5s;
+}
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.main_app .popup_overlay .popup.welcome_popup {
+  border: 2px solid #607BCC;
+  border-radius: 20px;
+}
+.main_app .popup_overlay .popup.welcome_popup .popup_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.main_app .popup_overlay .popup.welcome_popup .popup_content h3 {
+  color: #FAFBFC;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 45px;
+  max-width: 300px;
+  font-weight: 400;
+  line-height: 1em; /* 98.385% */
+}
+.main_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+}
+.main_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button {
+  padding: 15px;
+  border-radius: 50px;
+  color: #FAFBFC;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3em;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button:hover {
+  background: white !important;
+  border-color: white !important;
+  color: black !important;
+}
+.main_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button.sign_up {
+  width: calc(50% - 7.5px);
+  border: 1px solid #607BCC;
+}
+.main_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button.sign_in {
+  width: calc(50% - 7.5px);
+  background: #607BCC;
+  border: 1px solid #607BCC;
+}
+.main_app .popup_overlay .popup.welcome_popup .popup_content .dashboard_options .sl_button.continue_wallet {
+  width: 100%;
+  background: #605F76;
+  border: 1px solid #605F76;
+}
+.main_app .popup_overlay .popup .popup_content {
+  padding: 0 50px;
+}
+.main_app .popup_overlay .popup .popup_content * {
+  font-family: "Poppins", sans-serif;
+}
+.main_app .popup_overlay .popup .popup_content .top_heading {
+  display: flex;
+  justify-content: space-between;
+}
+.main_app .popup_overlay .popup .popup_content .top_heading .left_side {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+.main_app .popup_overlay .popup .popup_content .top_heading .left_side h2 {
+  all: unset;
+  color: #FAFBFC !important;
+  font-size: 30px;
+  font-weight: 400;
+}
+.main_app .popup_overlay .popup .popup_content .top_heading .left_side p {
+  color: #AAA7B2;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2em;
+  letter-spacing: 0.1px;
+}
+.main_app .popup_overlay .popup .popup_content .top_heading .right_side {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 20px;
+}
+.main_app .popup_overlay .popup .popup_content .top_heading .right_side span {
+  color: #607BCC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.28emm;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  display: block;
+}
+.main_app .popup_overlay .popup .popup_content .form_container {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .field_container {
+  border: 1px solid #605F76;
+  height: 48px;
+  border-radius: 40px;
+  position: relative;
+  padding: 6px 20px;
+  transition: 0.15s;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .field_container .error_message {
+  display: none;
+  position: absolute;
+  color: #EF3F26;
+  top: calc(100% + 10px);
+  left: 0;
+  font-size: 10px;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .field_container.field_error {
+  border-color: #EF3F26;
+  margin-bottom: 25px;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .field_container.field_error label {
+  color: #EF3F26;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .field_container.field_error .error_message {
+  display: block;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .field_container label {
+  position: absolute;
+  left: 20px; /* Hey Dev: You can change this to fit the field container padding */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #AAA7B2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5em;
+  transition: 0.15s;
+  pointer-events: none;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .field_container input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  color: white;
+  border: 0;
+  padding-top: 10px;
+  color: #AAA7B2;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .field_container input:focus + label,
+.main_app .popup_overlay .popup .popup_content .form_container .field_container input.not_empty + label {
+  transform: unset;
+  top: 5px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .acceptance {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .acceptance input[type=checkbox] {
+  accent-color: #607BCC;
+  height: 20px;
+  width: 20px;
+}
+.main_app .popup_overlay .popup .popup_content .form_container .acceptance label {
+  color: #AAA7B2;
+  font-size: 12px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.main_app .popup_overlay .popup .popup_content .form_container button.submit_form {
+  height: 48px;
+  border-radius: 60px;
+  background: #607BCC;
+  border: 0;
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3em;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+.main_app .popup_overlay .popup .popup_content .form_container button.wallet_continue {
+  height: 48px;
+  border-radius: 60px;
+  background: #605f76;
+  border: 0;
+  color: #FAFBFC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3em;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+.main_app .popup_overlay .popup.sign_in .forgot_password {
+  color: #607BCC;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.28em;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.main_app .popup_overlay .popup.sign_in .divider {
+  position: relative;
+  border-bottom: 1px solid #605F76;
+  margin: 25px 0;
+}
+.main_app .popup_overlay .popup.sign_in .divider span {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background: black;
+  color: #AAA7B2;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0 10px;
+}
+.main_app .popup_overlay .popup.sign_in .login_options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login {
+  border: 1px solid #605F76;
+  padding: 6px 12px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login svg {
+  height: 30px;
+  width: 30px;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login svg path {
+  transition: 0.2s;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login.facebook svg path {
+  stroke: #607BCC;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login.facebook:hover {
+  background: #607BCC;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login.facebook:hover svg path {
+  stroke: white;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login.facebook:hover span {
+  color: white;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login.twitter svg path {
+  stroke: #fff;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login.twitter:hover {
+  background: #fff;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login.twitter:hover svg path {
+  stroke: black;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login.twitter:hover span {
+  color: black;
+}
+.main_app .popup_overlay .popup.sign_in .login_options .option_login span {
+  color: #AAA7B2;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5em;
+  transition: 0.2s;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content svg {
+  width: 52px;
+  height: 52px;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content h2 {
+  color: #FAFBFC;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 1em;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content p {
+  color: #AAA7B2;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 2em;
+  letter-spacing: 0.1px;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content .buttons_con {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content .buttons_con .single_btn {
+  width: 50%;
+  height: 48px;
+  border: 1px solid #607BCC;
+  border-radius: 50px;
+  color: #FAFBFC;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4em;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content .buttons_con .single_btn:nth-child(2), .main_app .popup_overlay .popup.modern_alert .popup_content .buttons_con .single_btn:hover {
+  color: white;
+  background: #607BCC;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content .subscribe_form {
+  height: 48px;
+  position: relative;
+  width: 100%;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  overflow: hidden;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content .subscribe_form input {
+  height: 100%;
+  width: 100%;
+  padding-left: 20px;
+  background: transparent;
+  border: 1px solid #607BCC;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  outline: none;
+  color: white;
+}
+.main_app .popup_overlay .popup.modern_alert .popup_content .subscribe_form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 25%;
+  cursor: pointer;
+  background: #607BCC;
+  border: 0;
+  color: white;
+  text-transform: uppercase;
+}
+.main_app .popup_overlay .popup.small_title .popup_content h2 {
+  font-size: 30px;
+}
+@media (max-width: 768px) {
+  .main_app .popup_overlay {
+    padding: 20px 0;
+  }
+  .main_app .popup_overlay .popup {
+    padding: 20px 0;
+  }
+  .main_app .popup_overlay .popup .popup_content {
+    padding: 0 15px;
+  }
+  .main_app .popup_overlay .popup .popup_content .top_heading .left_side h2 {
+    font-size: 20px;
+  }
+  .main_app .popup_overlay .popup .popup_content .top_heading .left_side p {
+    font-size: 12px;
+  }
+  .main_app .popup_overlay .popup .popup_content .top_heading .right_side {
+    padding-top: 10px;
+  }
+  .main_app .popup_overlay .popup .popup_content .top_heading .right_side span {
+    font-size: 12px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container {
+    margin-top: 10px;
+    gap: 8px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container .field_container {
+    height: 40px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container .field_container .error_message {
+    font-size: 9px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container .field_container label {
+    font-size: 13px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container .field_container input {
+    font-size: 12px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container .field_container input:focus + label,
+  .main_app .popup_overlay .popup .popup_content .form_container .field_container input.not_empty + label {
+    font-size: 9px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container .acceptance input[type=checkbox] {
+    height: 12px;
+    width: 12px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container .acceptance label {
+    font-size: 10px;
+  }
+  .main_app .popup_overlay .popup .popup_content .form_container button.submit_form {
+    height: 35px;
+    font-size: 13px;
+  }
+  .main_app .popup_overlay .popup.sign_in .forgot_password {
+    font-size: 11px;
+    margin-top: 10px;
+  }
+  .main_app .popup_overlay .popup.sign_in .divider span {
+    font-size: 12px;
+  }
+  .main_app .popup_overlay .popup.sign_in .login_options {
+    gap: 10px;
+  }
+  .main_app .popup_overlay .popup.sign_in .login_options .option_login span {
+    font-size: 12px;
+  }
+  .main_app .popup_overlay .popup.modern_alert .popup_content {
+    gap: 12px;
+  }
+  .main_app .popup_overlay .popup.modern_alert .popup_content svg {
+    width: 40px;
+    height: 40px;
+  }
+  .main_app .popup_overlay .popup.modern_alert .popup_content h2 {
+    font-size: 25px;
+  }
+  .main_app .popup_overlay .popup.modern_alert .popup_content p {
+    font-size: 12px;
+    line-height: 1.3em;
+  }
+  .main_app .popup_overlay .popup.modern_alert .popup_content .buttons_con {
+    gap: 10px;
+  }
+  .main_app .popup_overlay .popup.modern_alert .popup_content .buttons_con .single_btn {
+    height: 40px;
+    font-size: 12px;
+    line-height: 1.4em;
+  }
+  .main_app .popup_overlay .popup.modern_alert .popup_content .subscribe_form {
+    height: 40px;
+  }
+  .main_app .popup_overlay .popup.small_title .popup_content h2 {
+    font-size: 20px;
+  }
+}
+.main_app .message_popup {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 300px;
+  max-width: 90%;
+  z-index: 10000;
+  background: black;
+  border: 2px solid #607BCC;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.main_app .message_popup.success_popup svg path {
+  fill: #607BCC;
+}
+.main_app .message_popup.error_message svg path {
+  fill: #C292EB;
+}
+.main_app .message_popup svg {
+  width: 39px;
+  margin-bottom: -10px;
+}
+.main_app .message_popup h3 {
+  color: #FAFBFC;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1em;
+}
+.main_app .message_popup p {
+  color: #AAA7B2;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.25em;
+  letter-spacing: 0.095px;
+}
+@media (max-width: 768px) {
+  .main_app .message_popup {
+    top: 60px;
+    right: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+  }
+  .main_app .message_popup svg {
+    width: 30px;
+    margin-bottom: -15px;
+  }
+  .main_app .message_popup h3 {
+    font-size: 20px;
+  }
+  .main_app .message_popup p {
+    color: #AAA7B2;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.25em;
+    letter-spacing: 0.095px;
+  }
+}
+.main_app .homepage {
+  overflow: hidden;
+}
+.main_app .homepage::-webkit-scrollbar {
+  display: none;
+}/*# sourceMappingURL=combined.css.map */

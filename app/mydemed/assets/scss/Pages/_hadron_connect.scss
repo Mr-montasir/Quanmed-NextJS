@@ -1,0 +1,275 @@
+.hadron_connect {
+    .form_filter {
+        display: flex;
+        height: 60px;
+        gap: 35px;
+        width: 100%;
+        margin-top: 25px;
+        .search_container {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            border: 1px solid #F5F5F7;
+            padding: 14px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+            input {
+                width: calc(100% - 40px);
+                text-align: right;
+                color: #FAFBFC; 
+                background: transparent;
+                font-size: 14px; 
+                font-weight: 400; 
+                letter-spacing: -0.12px;
+                border: 0;
+                outline: none;
+            }
+        }
+        .filter_options {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            gap: 24px;
+            .f_option {
+                @include toCenter();
+                width: 100%;
+                border-radius: 10px;
+                border: 1px solid #F5F5F7;
+                gap: 12px; 
+                color: #FAFBFC; 
+                font-size: 14px; 
+                font-weight: 600; 
+                letter-spacing: -0.24px;
+                cursor: pointer;
+            }
+        }
+    }
+    section {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        .swiper {
+            width: 100%;
+            .swiper-wrapper {
+                max-width: 100%;
+            }
+        }
+        h2 {
+            color: white;
+            margin-bottom: 18px;
+        }
+        .chemist_card {
+            border-radius: 12.685px;
+            background: rgba(20, 27, 34, 0.70);
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            .card_top {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .person_info {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    .user_icon {
+                        svg {
+                            height: 50px;
+                            width: 50px;
+                        }
+                    }
+                    .name_role {
+                        .name {
+                            color: #FAFBFC; 
+                            font-size: 16px; 
+                            font-weight: 600;
+                            line-height: 1.5em;
+                            letter-spacing: -0.32px;
+                        }
+                        .role {
+                            color: #D9D9D9; 
+                            font-size: 13px; 
+                            font-weight: 400; 
+                            letter-spacing: -0.12px;
+                        }
+                    }
+                }
+                .user_status {
+                    color: #607BCC;
+                    text-align: right; 
+                    font-size: 15px; 
+                    font-weight: 600;
+                    line-height: 1.5em;
+                }
+            }
+            .user_description {
+                color: #D9D9D9; 
+                font-size: 14px; 
+                font-weight: 300;
+                line-height: 1.8em;
+                font-family: 'Inter', sans-serif;
+                margin-top: 8px;
+            }
+            .card_bottom {
+                display: flex;
+                gap: 10px;
+                .icon_txt {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    svg {
+                        width: 25px;
+                        height: 25px;
+                    }
+                    span {
+                        color: #FAFBFC; 
+                        font-size: 14px; 
+                        font-weight: 400;
+                        line-height: 1.5em;  
+                        letter-spacing: -0.28px;
+                    }
+                    &:last-child {
+                        justify-content: flex-end;
+                    }
+                }
+            }
+        }
+    }
+    section {
+        .chemists_grid {
+            display: grid;
+            grid-template-columns: repeat(2 , 1fr);
+            max-width: 90%;
+            grid-column-gap: 32px;
+            grid-row-gap: 28px;
+            width: 100%;
+            .chemist_card {
+                width: 100%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .hadron_connect {
+        padding-bottom: 50px;
+        .form_filter {
+            display: flex;
+            height: 30px;
+            gap: 5px;  
+            .search_container {
+                width: 100%;
+                border-radius:3px; 
+                padding: 5px 5px;
+                gap: 4px;
+                svg {
+                    width:  10px;
+                    height: 10px;
+                }
+                input {
+                    width: calc(100% - 10px);
+                    font-size: 9px; 
+                    text-align: left;
+                }
+            }
+            .filter_options { 
+                gap: 5px;
+                .f_option {
+                    svg {
+                        width: 15px;
+                        height: 15px;
+                    }
+                    gap: 4px; 
+                    @include toCenter(); 
+                    border-radius: 5px; 
+                    font-size: 6.5px; 
+                    font-weight: 400;
+                    span {
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+        section {
+            margin-top: 20px; 
+            &.slider_first {
+                display: none; 
+            }
+            h2 { 
+                margin-bottom: 12px;
+                font-size: 16px;
+            }
+        }
+        section {
+            .chemists_grid {
+                display: grid;
+                grid-template-columns: repeat(2 , 1fr);
+                max-width: 90%;
+                grid-column-gap: 5px;
+                grid-row-gap: 5px;
+                min-width: 100%;
+                .chemist_card {
+                    width: 100%;
+                }
+            }
+            .chemist_card {
+                border-radius: 7px; 
+                padding: 10px; 
+                gap: 8px !important;
+                width: 100%;
+                .card_top { 
+                    .person_info { 
+                        gap: 2px;
+                        .user_icon {
+                            svg {
+                                height: 30px;
+                                width:  30px;
+                            }
+                        }
+                        .name_role {
+                            .name { 
+                                font-size: 9px; 
+                            }
+                            .role { 
+                                font-size: 9px; 
+                            }
+                        }
+                    }
+                    .user_status { 
+                        font-size: 7px; 
+                    }
+                }
+                .user_description { 
+                    font-size: 10px; 
+                }
+                .card_bottom { 
+                    gap: 0;
+                    .icon_txt { 
+                        gap: 3px;
+                        svg {
+                            width:  14px;
+                            height: 14px;
+                        }
+                        span { 
+                            font-size: 8px; 
+                        } 
+                        &:nth-child(2) {
+                            gap: 3px;
+                            span {
+                                font-size: 6px;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}

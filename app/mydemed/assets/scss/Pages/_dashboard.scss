@@ -1,0 +1,448 @@
+.main_dashboard {
+    display: flex;
+    flex-direction: column;
+    .panels_container {
+        .panel {
+            .panel_top {
+                .left_side {
+                    .navigation_keys {
+                        display: flex;
+                        justify-content: space-between;
+                        padding-top: 6px;
+                        .color {
+                            &.gray {
+                                color: #8F8F8F;
+                            }
+                            &.blue {
+                                color: #607BCC;
+                            }
+                            &.pink {
+                                color: #C292EB;
+                            }
+                        }
+                    }
+                }
+            }
+            #health_history_charts {
+                margin-top: 30px;
+            }
+        } 
+    }
+    .two_columns {
+        display: flex;
+        align-items: flex-start;
+        gap: 30px; 
+        .panel:nth-child(1) {
+            width: 143%; 
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .panel_content {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .activity_feed {
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+                    .left_icon {
+                        @include toCenter();
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        background:  rgba(194, 146, 235, 0.62);
+                        position: relative;
+                        &::after {
+                            content: '';
+                            height: 110%;
+                            width: 110%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            border-radius: 50%;
+                            transform: translate(-50%, -50%);
+                            pointer-events: none;
+                            border: 1px solid rgba(194, 146, 235, 0.62);
+                        }
+                        svg {
+                            width: 28px;
+                            height: 28px;
+                        }
+                    }
+                    .feed_content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px; 
+                        width: calc(100% - 150px);
+                        .feed_title {
+                            color: #FAFBFC; 
+                            font-size: 14px; 
+                            font-weight: 500; 
+                        }
+                        .feed_time {
+                            color: #8F8F8F;
+                            font-family: 'Inter', sans-serif;
+                            font-size: 12px; 
+                            font-weight: 400; 
+                        }
+                    }
+                    .status {
+                        @include toCenter();
+                        padding: 6px;
+                        font-size: 14px; 
+                        font-weight: 500; 
+                        border-radius: 6px;
+                        &.applying {
+                            color: #607BCC; 
+                            border: 1px solid #607BCC;
+                        }
+                        &.completed {
+                            color: #C292EB; 
+                            border: 1px solid #C292EB;
+                        }
+                    }
+                }
+            }
+        }
+        .panel:nth-child(2) {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .panel_content {
+                display: flex;
+                flex-direction: column;
+                gap: 14px;
+            }
+            .appointment_row {
+                display: flex;
+                align-items: center;
+                gap: 17px;
+                .date {
+                    padding: 5px 10px;
+                    border-radius: 6px;
+                    background: #1B1C31;
+                    box-shadow: 0px 4px 26px 0px rgba(111, 111, 114, 0.12);
+                    .day {
+                        color: #C292EB;
+                        text-align: center; 
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                    }
+                    .day_number {
+                        color: #EFEFEF; 
+                        font-size: 12px; 
+                        font-weight: 500; 
+                        @include toCenter();
+                    }
+                }
+                .appointment_content {
+                    width: calc(100% - 150px);
+                    .appointment_title {
+                        color: #FAFBFC; 
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                    .appointment_time {
+                        color: #8F8F8F; 
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: normal;
+                    }
+                }
+                .appointment_dots {
+                    display: flex;
+                    flex-direction: column;
+                    width: 30px;
+                    gap: 4px;
+                    aspect-ratio: 1 / 1;
+                    @include toCenter();
+                    margin-left: auto;
+                    padding: 6px;
+                    background: #1B1C31;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    .apn_circle {
+                        height: 6px;
+                        width: 6px;
+                        border-radius: 50%;
+                        background: gray;
+                    }
+                }
+            }
+        }
+    }
+    .vertical_chart {
+        @include toCenter(); 
+        border-radius: 10px;
+        width: 100%;
+        height: 530px;
+        display: none;
+        font-size: 50px;
+        color: white;
+        & > div {
+            width: 100%;
+            height: 100%;
+        }
+        .highcharts-credits {
+            display: none;
+        }
+        .highcharts-series {
+            path {
+                stroke: #0e1318;
+                stroke-linecap: round !important;
+                border-radius: 20px;
+                stroke-width: 5px;
+            }
+        }
+        .highcharts-yaxis-grid {
+            path {
+                stroke: rgba(247, 248, 250, 0.07);
+            }
+        }
+        &.show {
+            display: flex; 
+        }
+    }
+    .sl_table {
+        .table_body {
+            .ds_data_row {
+                display: flex; 
+                .col_1:not(:nth-child(1)) {
+                    text-align: center;
+                }
+                &:nth-child(1) {
+                    .company_info .ds_icon {
+                        border-color: #C292EB;
+                        svg path {
+                            stroke: #C292EB; 
+                        }
+                    }
+                }
+                &:nth-child(2) {
+                    .company_info .ds_icon {
+                        border-color: #fff;
+                        svg path {
+                            stroke: #fff; 
+                        }
+                    }
+                }
+                &:nth-child(3) {
+                    .company_info .ds_icon {
+                        border-color: #607BCC;
+                        svg path {
+                            stroke: #607BCC; 
+                        }
+                    }
+                }
+                .company_info {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    .ds_icon {
+                        @include toCenter();
+                        border: 1px solid #C292EB;
+                        height: 40px;
+                        width: 40px;
+                        border-radius: 10px;
+                        svg {
+                            width: 25px;
+                            height: 25px; 
+                            path {
+                                stroke: #C292EB; 
+                            }
+                        }
+                    }
+                    .ds_content {
+                        .ds_name {
+                            color: #F4F0FF; 
+                            font-size: 16px; 
+                            font-weight: 600; 
+                            text-transform: capitalize;
+                        }
+                        .ds_country {
+                            color: #475D96; 
+                            font-size: 10px; 
+                            font-weight: 600; 
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+                .ds_date,
+                .ds_date_2,
+                .ds_amount {
+                    color: #6E86C2;
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+                .ds_amount {
+                    color: white;
+                }
+                .ds_token { 
+                    font-size: 16px; 
+                    font-weight: 700; 
+                    text-transform: capitalize;
+                    background: linear-gradient(180deg, #C292EB 0%, #607BCC 48.96%, #99EDF9 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .main_dashboard { 
+        .panels_container {
+            .panel { 
+                .panel_top {
+                    .left_side { 
+                        .navigation_keys { 
+                            .color {
+                                font-size: 9px; 
+                            }
+                        }
+                    }
+                }
+                #health_history_charts {
+                    margin-top: 10px;
+                }
+            } 
+        }
+        .two_columns { 
+            flex-direction: column;
+            .panel:nth-child(1) {
+                width: 100%;  
+                .panel_content { 
+                    gap: 10px;
+                    .activity_feed { 
+                        gap: 10px;
+                        .left_icon { 
+                            width: 28px;
+                            height: 28px;  
+                            svg {
+                                width: 80%;
+                                height: 80%;
+                            }
+                        }
+                        .feed_content {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px; 
+                            width: calc(100% - 150px);
+                            .feed_title {
+                                color: #FAFBFC; 
+                                font-size: 10px;  
+                            }
+                            .feed_time { 
+                                font-size: 9px; 
+                            }
+                        }
+                        .status { 
+                            padding: 3px 5px;
+                            font-size: 11px; 
+                            font-weight: 500;   
+                            margin-left: auto;
+                        }
+                    }
+                }
+            }
+            .panel:nth-child(2) { 
+                .panel_content { 
+                    gap: 10px;
+                }
+                .appointment_row { 
+                    .date {
+                        padding: 5px; 
+                        .day { 
+                            font-size: 12px; 
+                            width: 30px;
+                        }
+                        .day_number { 
+                            font-size: 11px;  
+                        }
+                    }
+                    .appointment_content { 
+                        .appointment_title { 
+                            font-size: 13px; 
+                        }
+                        .appointment_time { 
+                            font-size: 11px; 
+                        }
+                    }
+                    .appointment_dots { 
+                        width: 20px;
+                        gap: 3px; 
+                        padding: 4px; 
+                        .apn_circle {
+                            height: 3px;
+                            width: 3px; 
+                        }
+                    }
+                }
+            }
+        }
+        .vertical_chart { 
+            border-radius: 10px;
+            width: 100%;
+            height: 250px; 
+            .highcharts-series {
+                path {
+                    stroke-width: 2;
+                }
+            }
+            .highcharts-axis-labels {
+                text {
+                    font-size: 9px !important;
+                }
+            }
+        }
+        .sl_table {
+            .col_1:first-child  {
+                width: 200%;
+            } 
+            .table_body {
+                .ds_data_row {
+                    .col_1:first-child  {
+                        width: 200%;
+                    } 
+                    .company_info { 
+                        gap: 6px;
+                        .ds_icon { 
+                            height: 25px;
+                            width:  25px; 
+                            border-radius: 5px;
+                            svg {
+                                width: 60%;
+                                height: 60%;  
+                            } 
+                        }
+                        .ds_content {
+                            .ds_name { 
+                                font-size: 7px;  
+                            }
+                            .ds_country { 
+                                font-size: 9px;  
+                            }
+                        }
+                    }
+                    .ds_date,
+                    .ds_date_2,
+                    .ds_amount { 
+                        font-size: 7.5px; 
+                    } 
+                    .ds_token { 
+                        font-size: 7.5px;
+                        display: block; 
+                    }
+                }
+            }
+        }
+    }
+}

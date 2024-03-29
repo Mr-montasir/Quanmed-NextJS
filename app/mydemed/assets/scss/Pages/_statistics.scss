@@ -1,0 +1,644 @@
+.statistics {  
+    .two_columns {
+        display: flex;
+        gap: 17px;
+        width: 100%;
+        .panel {
+            width: 100%;
+            .pie_chart { 
+                svg path {
+                    stroke-width: 0;
+                } 
+                .highcharts-credits {
+                    display: none;
+                }
+                .chart_keys {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    .chart_item {
+                        border-radius: 5.411px;
+                        background: rgba(26, 113, 255, 0.10);
+                        padding: 6px 10px;
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        .chart_color {
+                            height: 14px;
+                            width: 14px;
+                            border-radius: 2.164px;
+                            &.btc {
+                                background: #607BCC; 
+                            }
+                            &.eth {
+                                background: #C292EB; 
+                            }
+                            &.vha {
+                                background: #99EDF9; 
+                            }
+                            &.others {
+                                background: #3966EF; 
+                            }
+                        }
+                        .chart_name {
+                            color: #FAFBFC; 
+                            font-size: 14px; 
+                            font-weight: 600; 
+                        }
+                    }
+                }
+            } 
+            .panel_top {
+                .right_side { 
+                    .button_dropdown {
+                        z-index: 10;
+                        .button_trigger { 
+                            padding: {
+                                top: 15px !important;
+                                bottom: 15px !important; 
+                            }
+                            border-color: #30363f !important;
+                        }
+                    }
+                }
+            }
+            .convert_currency {
+                display: flex;
+                flex-direction: column; 
+                gap: 20px; 
+                .input_wrapper {
+                    width: 100%;
+                    height: 70px;
+                    position: relative;
+                    &:nth-child(1) {
+                        z-index: 2;
+                    }
+                    &:nth-child(2) {
+                        z-index: 1;
+                    }
+                    &.from {
+                        span {
+                            color: #607BCC;
+                        }
+                    }
+                    &.to {
+                        span {
+                            color: #C292EB;
+                        }
+                    }
+                    input {
+                        height: 100%;
+                        width: 100%;
+                        padding: 2px 7px 2px 17px;
+                        border-radius: 7px;
+                        background: rgba(0, 0, 0, 0.20);
+                        border: transparent;
+                        outline: none;
+                        color: white;
+                        font-weight: 600;
+                        font-size: 14px;
+                        &::-webkit-outer-spin-button,
+                        &::-webkit-inner-spin-button {
+                          -webkit-appearance: none; 
+                        } 
+                    }
+                    .button_dropdown {
+                        position: absolute;
+                        right: 5px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        .button_trigger {
+                            @include toCenter();
+                            border-radius: 7px;
+                            border: 2px solid #6b6d70;
+                            color: rgba(250, 251, 252, 0.54);
+                            font-family: 'Inter', sans-serif;
+                            font-size: 14px; 
+                            font-weight: 500; 
+                            cursor: pointer;
+                            transition: .3s;
+                            padding: 5px 10px;
+                            gap: 12px;
+                            background: #0b0f13;
+                            min-width: 80px;
+                            justify-content: center;
+                            .three_dots {
+                                display: flex;
+                                align-items: center;
+                                gap: 3px;
+                                .sl_dot {
+                                    height: 4px;
+                                    width: 4px;
+                                    border-radius: 50%;
+                                    background: #3b424c;
+                                }
+                            }
+                            &:hover {
+                                background: #11171d; 
+                                border-color: rgba(250, 251, 252, 0.7);
+                            }
+                        }
+                        .button_dropdown_content {
+                            position: absolute;
+                            right: 0;
+                            top: 100%;
+                            transition: .5s;
+                            box-shadow: 0 0 5px 0 rgba($color: #607BCC, $alpha: .3);
+                            display: flex;
+                            flex-direction: column; 
+                            gap: 5px;
+                            border-radius: 10px;
+                            width: 100%;
+                            padding: 10px;
+                            min-width: fit-content;
+                            background: #000;
+                            opacity: 0;
+                            pointer-events: none;
+                            transform: translateY(0);
+                            .dropdown_option {
+                                padding: 3px 12px; 
+                                white-space: nowrap;
+                                border-radius: 5px;
+                                color: rgba(250, 251, 252, 0.54);
+                                border: 1px solid rgba(250, 251, 252, 0.7);
+                                font-size: 12px;
+                                transition: .15s;
+                                cursor: pointer;
+                                &:hover {
+                                    background: rgba(250, 251, 252, .05); 
+                                    border: 1px solid rgba(250, 251, 252, 0.7);
+                                }
+                                &.choosen_option {
+                                    border-color: white;
+                                    color: white;
+                                }
+                            }
+                        }
+                        &.open { 
+                            .button_dropdown_content {
+                                opacity: 1;
+                                pointer-events: all;
+                                transform: translateY(10px);
+                            }
+                        }
+                    }
+                }
+                button {
+                    @include toCenter();
+                    height: 70px;
+                    background: transparent;
+                    width: 100%;
+                    border: 1px solid white;
+                    color: white;
+                    cursor: pointer;
+                    font-size: 18px;
+                    transition: .3s;
+                    border-radius: 8px;
+                    &:hover {
+                        background: white;
+                        color: black;
+                    }
+                }
+                p {
+                    color: #626D7D; 
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1.43em;
+                }
+            }
+
+        }
+    }
+    // second panel
+    .panel {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        .sl_table { 
+            .table_body {
+                .history_row {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    border-bottom: 1px solid #262a2f;
+                    padding-bottom: 20px;
+                    .hs_icon {
+                        &.up {
+                            svg {
+                                transform: rotate(180deg); 
+                                circle {
+                                    fill: #99EDF9;
+                                }
+                                path {
+                                    stroke: #99EDF9;
+                                }
+                            }  
+                        }
+                        &.down {
+                            svg {
+                                circle {
+                                    fill: #607BCC;
+                                }
+                                path {
+                                    stroke: #607BCC;
+                                }
+                            }  
+                        }
+                    }
+                    .hs_name {
+                        color: #FAFBFC; 
+                        font-size: 14px; 
+                        font-weight: 600;
+                        line-height: 2.35em;
+                        text-align: left;
+                    }
+                    .hs_amount {
+                        color: #607BCC;
+                        text-align: right; 
+                        font-size: 14px; 
+                        font-weight: 600;
+                        line-height: 1.87em;
+                    }
+                    .hs_time {
+                        color: #FAFBFC;
+                        text-align: right; 
+                        font-size: 14px; 
+                        font-weight: 500;
+                        line-height: 1.87em;
+                    }
+                    .hs_status {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        .status {
+                            font-size: 13px;
+                            padding: 5px 8px;
+                            border-radius: 6px;
+                            &.pending {
+                                background: #99EDF969;
+                                color: #99EDF9;
+                            }
+                            &.success {
+                                background: rgba(96, 123, 204, 0.43);
+                                color: #607BCC;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // other panels
+    .panel {
+        .recent_orders { 
+            .recent_orders_head {
+                display: flex;
+                .ro_title {
+                    color: #607BCC; 
+                    font-size: 17px; 
+                    font-weight: 600; 
+                    text-transform: capitalize;
+                    &.amount_title {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 10px !important;
+                    }
+                    &.orders_title {
+                        width: 200%;
+                        font-size: 10px !important;
+                    }
+                }
+            }
+            .recent_orders_content {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 45px;
+                .recent_orders_row {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    &:nth-child(2) {
+                        .icon_container {
+                            background: #c292eb;
+                        }
+                    }
+                    &:nth-child(3) { 
+                        .icon_container {
+                            background: #598991;
+                        }
+                    }
+                    .icon_container {
+                        background: #607bcc;
+                        height: 60px;
+                        width: 60px;
+                        border-radius: 15px;
+                        @include toCenter();
+                        svg {
+                            width: 50%;
+                            height: 50%;
+                            circle,
+                            path {
+                                stroke: white;
+                            }
+                        }
+                    }
+                    .orders {
+                        width: 200%;
+                        display: flex;
+                        align-items: center;
+                        gap: 20px;
+                        .orders_content {
+                            display: flex;
+                            flex-direction: column;
+                            .name {
+                                color: #F4F0FF; 
+                                font-size: 16px; 
+                                font-weight: 500; 
+                                text-transform: capitalize;
+                            }
+                            .duration {
+                                color: #607BCC;
+                                font-size: 14px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                text-transform: capitalize;
+                            }
+                        }
+                    }
+                    .amount {
+                        @include toCenter();
+                        width: 100%;
+                        border-radius: 7.611px;
+                        border: 1px solid #607BCC;
+                        height: 50px;
+                        color: rgba(153, 237, 249, 0.54); 
+                        font-size: 18px; 
+                        font-weight: 600; 
+                        text-transform: capitalize;
+                    }
+                }
+            }
+
+        }
+        .data_analysis {
+            .data_title {
+                color: #607BCC;
+                font-size: 16.87px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-transform: capitalize;
+            }
+            .manual_vertical_chart {
+                display: flex;
+                justify-content: space-around;
+                gap: 30px;
+                margin-top: 20px;
+                .chart_column {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    gap: 0px;
+                    min-height: 360px;
+                    align-items: center;
+                    .chart_value {
+                        margin-bottom: 20px;
+                        width: 40px;
+                        border-radius: 24.1px;
+                        background: linear-gradient(180deg, #607BCC 0%, rgba(96, 123, 204, 0.04) 100%);
+                    }
+                    .chart_numbers {
+                        color: #FAFBFC;
+                        font-family: Poppins;
+                        font-size: 17px; 
+                        font-weight: 600; 
+                        text-transform: capitalize;
+                    }
+                    .chart_name {
+                        color: #607BCC; 
+                        font-size: 16px; 
+                        font-weight: 600; 
+                        text-transform: capitalize;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .statistics {  
+        .two_columns { 
+            gap: 5px; 
+            .panel {
+                width:calc(50% - 10px);
+                .pie_chart { 
+                    margin: 0 auto;
+                    .highcharts-container {
+                        height: 130px !important;
+                        max-width: 100%; 
+                    }
+                    .highcharts-credits {
+                        display: none;
+                    }
+                    .chart_keys { 
+                        .chart_item {
+                            border-radius: 5px;
+                            background: rgba(26, 113, 255, 0.10);
+                            padding: 4px;
+                            gap: 2px;
+                            .chart_color {
+                                height: 4px;
+                                width:  4px;  
+                            }
+                            .chart_name { 
+                                font-size: 6px;
+                            }
+                        }
+                    }
+                } 
+                .panel_top {
+                    .right_side { 
+                        .button_dropdown { 
+                            .button_trigger { 
+                                padding: {
+                                    top: 5px !important;
+                                    bottom: 5px !important; 
+                                }
+                            }
+                        }
+                    }
+                }
+                .convert_currency { 
+                    gap: 7px; 
+                    .input_wrapper { 
+                        height: 30px;
+                        input {
+                            height: 100%;
+                            width: 100%;
+                            padding: 2px 3px 2px 7px;
+                            font-size: 11px;
+                        }
+                        .button_dropdown {
+                            position: absolute;
+                            right: 5px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            .button_trigger {
+                                min-width: 50px; 
+                                @include toCenter();
+                                border-radius: 4px;
+                                border: 1px solid #6b6d70; 
+                                font-size: 8px; 
+                                padding: 3px 3px;
+                                gap: 7px; 
+                            }
+                            .button_dropdown_content { 
+                                padding: 5px; 
+                                .dropdown_option {
+                                    padding: 5px; 
+                                    font-size: 9px; 
+                                    min-width: 50px; 
+                                }
+                            } 
+                        }
+                    }
+                    button { 
+                        height: 30px;
+                        border-radius: 3px; 
+                        font-size: 11px; 
+                    }
+                    p { 
+                        font-size: 7px; 
+                    }
+                }
+    
+            }
+        }
+        // second panel
+        .panel { 
+            gap: 5px;
+            .panel_heading {
+                font-size: 11px !important;
+                text-transform: capitalize;
+            }
+            .sl_table { 
+                .table_body {
+                    .history_row { 
+                        padding-bottom: 10px;
+                        align-items: center;
+                        .hs_icon {
+                            width: 20%;
+                            svg {
+                                width: 100%;
+                            }
+                        }
+                        .hs_name { 
+                            font-size: 10px;
+                            padding-left: 5px;
+                        }
+                        .hs_amount {
+                            font-size: 10px;
+                        }
+                        .hs_time {
+                            font-size: 10px;
+                        }
+                        .hs_status {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            .status {
+                                font-size: 10px;
+                                padding: 2px 4px;
+                                border-radius: 3px; 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // other panels
+        .panel {
+            .recent_orders { 
+                .recent_orders_head {
+                    display: flex;
+                    .ro_title { 
+                        &.amount_title {
+                            font-size: 12px; 
+                        }
+                        &.orders_title {
+                            font-size: 12px; 
+                        }
+                    }
+                }
+                .recent_orders_content {
+                    margin-top: 10px; 
+                    gap: 15px;
+                    .recent_orders_row { 
+                        gap: 5px;  
+                        .icon_container { 
+                            height: 18px;
+                            width:  18px;
+                            border-radius: 2px;
+                            @include toCenter();
+                            svg {
+                                width: 60%;
+                                height: 60%; 
+                            }
+                        }
+                        .orders {
+                            width: 200%; 
+                            gap: 5px;
+                            .orders_content {
+                                .name {
+                                    font-size: 8px;
+                                }
+                                .duration { 
+                                    font-size: 7px; 
+                                }
+                            }
+                        }
+                        .amount { 
+                            width: 50%;
+                            border-radius: 3px; 
+                            height: 20px; 
+                            font-size: 8px; 
+                            font-weight: 400;  
+                            padding: 2px 4px;
+                        }
+                    }
+                }
+    
+            }
+            .data_analysis {
+                .data_title { 
+                    font-size: 10px; 
+                }
+                .manual_vertical_chart {
+                    gap: 1px;
+                    margin-top: 10px;
+                    .chart_column {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        gap: 0px;
+                        min-height: 130px;
+                        align-items: center;
+                        .chart_value {
+                            margin-bottom: 6px;
+                            width: 15px; 
+                        }
+                        .chart_numbers { 
+                            font-size: 12px; 
+                        }
+                        .chart_name { 
+                            font-size: 6.5px;  
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

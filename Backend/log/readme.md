@@ -1,0 +1,1 @@
+You can log event of whole project. And you can detect an error or defect of this project from logs and treat them and streamline your project.
