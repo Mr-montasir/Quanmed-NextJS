@@ -187,9 +187,9 @@ export function SignInPopup({ onClose, onSwitchPopup }) {
         open()
     }
 
-    const responseFacebook = (e) => {
-        console.log("res", e)
-    }
+    // const responseFacebook = (e) => {
+    //     console.log("res", e)
+    // }
 
     return (
         <div className="popup_overlay" onClick={onClose}>
@@ -232,13 +232,13 @@ export function SignInPopup({ onClose, onSwitchPopup }) {
                         <div className="option_login twitter">
                             <TwitterIcon /> <span>Sign in with Twitter</span>
                         </div>
-                        <FacebookLogin
+                        {/* <FacebookLogin
                             appId="3224146307728769"
                             autoLoad={true}
                             fields="name,email,picture"
                             callback={e => responseFacebook(e)}
                             redirectUri="http://localhost:3000/callback"
-                        />
+                        /> */}
                     </div>
                 </div>
             </div>
